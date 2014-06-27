@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign In</title>
+
+<!-- Loading Bootstrap -->
+    <link href="flatui/bootstrap/css/bootstrap.css" rel="stylesheet">
+<!-- Loading Flat UI -->
+    <link href="flatui/css/flat-ui.css" rel="stylesheet">
+    <!-- 
+ 	<link rel="stylesheet/less" type="text/css" href="stream.less" />
+ 	 -->
+
+<style type="text/css">
+	
+    * {
+        font-family: Lato;
+        font-weight:200;
+       
+    }
+    /* tooltip settings position, background, width and font size */
+    .tooltip .tooltip-inner {
+
+            background-color:#EBEDEE;
+            width:60px;
+            height:42px;
+            font-weight:regular;
+            color:#4FCD95;
+    }
+/* tooltip arrow settings : default is black; */  
+    .tooltip.bottom .tooltip-arrow{
+    border-bottom: 10px solid #EBEDEE;
+    }
+    body{
+        background-color:#ECF0F1; 
+    }
+    
+    /* This is a single-line comment */
+    .top-bar{
+        background-color:white;
+        height :60px; 
+        width:auto;
+        background-attachment:fixed;
+        background-position:top;
+    }
+    .tb.search-bar{
+        margin-top: 8px;
+        margin-left: 10%;
+        height:44px;
+        width:220px;
+        float:left;
+        
+    }
+    .tb.search-bar button input{
+        background: #00BDEF;
+        color: #FFFFFF;
+        font-weight: lighter;
+        font-size: 14px;
+        
+    }
+    .tb.search-bar input{
+
+        width:220px;
+        
+    }
+    .tb.logo {
+        height: 50px;
+        margin: 0px;
+        display: block;
+        background: url('checktomlogo.png') no-repeat;
+        background-position:center 15px;
+    }
+  
+    /*.specify_your_search, .search_results{
+     	margin: 40px 0 40px 0;
+	}*/
+/* Margin: top right bottom left*/
+    .content{
+        /*margin: 0% 10% 0 10%;*/
+        margin: 0% 5% 0 5%;
+        background-color: white; 
+        padding-top:3%;
+        padding-right:3%;
+        padding-left:3%;
+
+    }
+
+    .specify_your_search, .search_results{
+        /*margin: 3% 0% 1% 10%;*/
+        margin: 3% 5% 1% 5%;
+        font-family: Lato;
+        font-size: 24px;
+        color: #4FCD95;
+        font-weight:bold;
+    }
+
+    #location, #hashtag, #distance, #price{
+        font-size: 16px;
+        color: #34495E;
+    }
+    #location {
+        
+       float: left; 
+        margin-bottom:22px;
+        
+    }
+    #hashtag {
+       margin-bottom:0px;
+        
+    }
+    .match{
+       float: right; 
+	   text-align:right; 
+
+    }
+    .match h1{
+        font-family: Lato;
+        color: #4FCD95;
+        font-size: 80px;
+    }
+    .match h3{
+        font-family: Lato;
+        color: #2C3E50;
+        font-size: 27px;
+        font-weight:200;
+    }
+    .form-control {
+        
+    }
+	.search content img{
+		width: 100px;
+		float: bottom;
+	}
+    .vertical-space-10px{
+        margin-top: 10px;
+    }
+    .vertical-space-20px{
+        margin-top: 20px;
+    }
+    .vertical-space-40px{
+        margin-top: 40px;
+    }
+    @media (max-width: 480px) { 
+	    .tb.search-bar{
+	        
+	        margin-left: 0%;
+	        
+	    }
+    }
+</style>
+</head>
+<body >
+
+<div class="top-bar">
+    <div class="tb search-bar">
+        
+                 <div class="col-lg-16">
+                  <div class="form-group">
+                    <div class="input-group">                                     
+                      <input type="text" class="form-control" placeholder="What you are looking for?" id="search">
+                      <span class="input-group-btn">
+                            <button type="submit" class="btn"><span class="fui-search"></span></button>
+                        </span>
+                    </div>
+                    </div>
+              </div>
+
+
+
+    </div>
+    <div class="tb logo"></div>
+</div>
+<div class="container">
+    <div class="specify_your_search">
+        Specify your search
+    </div>
+    <div class="content">
+
+
+        <div class="row">
+            <div class="col-xs-4 ">
+                <div class="form-inline">
+                    <span class="glyphicon glyphicon-map-marker"></span> Location
+                </div>
+                <input type="text" class="form-control" id="location" placeholder="Your place" style="width:200px height=40px">
+                <div class="form-inline">
+                    <span class="glyphicon glyphicon-send"></span> Distance
+                </div>
+                <div id="location-slider" class="ui-slider" style="width:190px height=12px">
+                    <span class="ui-slider-value first">0</span>
+                    <span class="ui-slider-value last">&infin;</span>
+                </div>
+            </div>
+           
+            <div class="col-xs-5">
+                <div class="form-inline">
+                    <span class="glyphicon glyphicon-tags"></span> &nbsp;Hashtag
+                </div>
+                <input name="tagsinput" class="tagsinput" value="Bike,Retro,Books" />
+                <div class="form-inline">
+                    <span class="glyphicon glyphicon-credit-card"></span> Price
+                </div>
+                <div id="price-slider" class="ui-slider" style="width:190px height=12px">
+                    <span class="ui-slider-value first">0</span>
+                    <span class="ui-slider-value last">&infin;</span>
+                </div>
+            </div>
+            <div class="col-xs-3 ">
+                <div class="match">
+                    <h3>Matches</h3>
+                    <h1>63</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="search_results">
+            Search result
+        </div>
+	
+        <div class="search content" >
+           <img src="http://dummyimage.com/230x400/000/fff.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
+           <img src="http://dummyimage.com/230x440/de1666/ffc400.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
+           <img src="http://dummyimage.com/230x360/26de16/050505.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
+           <img src="http://dummyimage.com/230x420/16bdde/e300e3.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
+           <img src="http://dummyimage.com/230x400/2e4a4f/f0ebf0.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
+           <img src="http://dummyimage.com/230x480/4b4d2d/0008e8.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
+           <img src="http://dummyimage.com/230x380/4b4d2d/0008e8.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
+        </div>
+
+</div>
+    <script src="flatui/js/jquery-1.8.3.min.js"></script>
+    <script src="flatui/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="flatui/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="flatui/js/bootstrap.min.js"></script>
+    <script src="flatui/js/bootstrap-select.js"></script>
+    <script src="flatui/js/bootstrap-switch.js"></script>
+    <script src="flatui/js/flatui-checkbox.js"></script>
+    <script src="flatui/js/flatui-radio.js"></script>
+    <script src="flatui/js/jquery.tagsinput.js"></script>
+    <script src="flatui/js/jquery.placeholder.js"></script>
+    <script src="flatui/js/application.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            var $locationslider = $("#location-slider");
+            var $priceslider = $("#price-slider");
+            //$priceslider.slider();
+
+            
+            $locationslider.slider({
+                    min: 0,
+                    max: 15,
+                    value: 1,
+                    orientation: "horizontal",
+                    range: "min",
+                    slide: function(event, ui) {
+                        console.log(ui.value);
+                    }
+            });
+            
+           $priceslider.slider({ 
+                    min: 0,max: 15, 
+                    value: 5, 
+                    orientation: "horizontal",
+                    range: "min", 
+                    slide: repositionTooltip, 
+                    stop: hideTooltip 
+            });
+            function repositionTooltip( e, ui ){
+                var div = $(ui.handle).data("bs.tooltip").$tip[0];
+                var pos = $.extend({}, $(ui.handle).offset(), { width: $(ui.handle).get(0).offsetWidth,
+                                                        height: $(ui.handle).get(0).offsetHeight
+                  });
+        
+                var actualWidth = div.offsetWidth;
+        
+                tp = {left: pos.left + pos.width / 2 - actualWidth / 2}            
+                $(div).offset(tp);
+        
+                $(div).find(".tooltip-inner").text( ui.value );        
+            }
+             function hideTooltip( e, ui ){
+                $("#price-slider .ui-slider-handle:first").tooltip().tooltip("hide");
+                console.log('tooltip is hiding');
+            }
+    
+            
+            $("#price-slider .ui-slider-handle:first").tooltip( {title: $priceslider.slider("value"), placement: 'bottom', trigger: "focus"}).tooltip("hide");
+
+        });
+    </script>
+</body>
+</html>                                     

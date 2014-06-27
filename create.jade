@@ -1,0 +1,193 @@
+!!! 5
+html(lang='en')
+head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Sign Up
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
+    script(type='text/javascript', src='http://code.jquery.com/jquery.min.js')
+    script(src='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
+    style(type='text/css')
+      /* Make default font Lato for the page */
+      * {
+      font-family: Lato;
+      font-weight:200;
+      }
+      /* tooltip settings position, background, width and font size */
+      .tooltip .tooltip-inner {
+      margin-top:-25px;
+      background-color:#00BDEF;
+      width:200px;
+      font-size:10px;
+      }
+      /* tooltip arrow settings : default is black; */
+      .tooltip.right .tooltip-arrow{
+      border-right: 5px solid #00BDEF;
+      }
+      /* Or with your email label style; */
+      .divider {
+      width:420px;
+      text-align:center;
+      font-size:18px;
+      margin-top:-10px;
+      }
+      /* Left bar of "Or with your email label" */
+      .left {
+      float:left;
+      margin-right: auto;
+      background:black;
+      border:0;
+      height: 1px;
+      width:120px;
+      }
+      /* Right bar of "Or with your email label" */
+      .right {
+      float:right;
+      margin-left: none;
+      background:black;
+      border:0;
+      height: 1px;
+      width:120px;
+      }
+      /* Div class login */
+      .login{
+      margin: 20px;
+      }
+      /* set body background */
+      body{
+      background-color:#ECF0F1;
+      }
+      /* Top bar config: color, height, bg and bg position; */
+      .top-bar{
+      background-color:white;
+      height :60px;
+      width:auto;
+      background-attachment:fixed;
+      background-position:top;
+      }
+      /* Checktom logo config */
+      .tb.logo {
+      height: 50px;
+      margin: 0px;
+      display: block;
+      background: url('checktomlogo.png') no-repeat;
+      background-position:center 15px;
+      }
+      /* 20 px vartical space  */
+      .vertical-space-20px{
+      margin-top: 20px;
+      }
+      /* 40 px vartical space  */
+      .vertical-space-40px{
+      margin-top: 40px;
+      }
+      /* 10 px vartical space  */
+      .vertical-space-10px{
+      margin-top: 10px;
+      }
+      /* rimary button config  */
+      .btn-primary {
+      background:#2F4B94;
+      font-size:16px;
+      }
+      .login-lbl-info{
+      color: #16C0EF;
+      }
+      .form-control{
+      font-size:14px;
+      }
+      .btn-custom {
+      color: #50CD95;
+      background-color: #ECF0F1;
+      border-color: #50CD95;
+      border-width: 2px;
+      width:200px;
+      font-size:16px;
+      }
+      select.form-control
+      {
+      background-color: #50CD95;
+      color: #FFFFFF;
+      }
+      p.signup-lbl-info{
+      color: #16C0EF;
+      }
+      p.create-text{
+      font-size:24px;
+      font-weight:bold;
+      }
+      p.agree{
+      font-size:14px;
+      }
+      a.policy
+      {
+      color: #16C0EF;
+      }
+    script(type='text/javascript')
+      $(document).ready(function() {
+      $('input[type=password][name=pass_tooltip]').tooltip({
+      placement: "right",
+      trigger: "focus"
+      });
+      });
+  body
+    .top-bar
+      .tb.logo
+    .login(align='center')
+      .vertical-space-40px
+      div
+        p.create-text Create your free Checktom account
+      .vertical-space-40px
+      div
+        button.btn.btn-primary(type='button') Sign with Facebook
+      div
+        .vertical-space-10px
+        p.signup-lbl-info
+          span.glyphicon.glyphicon-info-sign
+          | We will never post anything to Facebook or share your info with anybody
+      .vertical-space-40px
+      .divider
+        hr.left
+        | or with your email
+        hr.right
+      .vertical-space-40px
+      .vertical-space-40px
+      form
+        .row
+          .col-md-4.col-md-offset-4
+            .form-group
+              input#inputFullName.form-control(type='fullname', placeholder='Full Name')
+        .row
+          .col-md-4.col-md-offset-4
+            .form-group
+              input#inputEmail.form-control(type='email', placeholder='Email')
+        .row
+          .col-md-4.col-md-offset-4
+            .form-group
+              input#inputPassword.form-control(type='password', placeholder='Password', data-toggle='tooltip', title='Choose a password at least eight characters long with at least one Uppercase letters', name='pass_tooltip')
+        .row
+          .col-md-4.col-md-offset-4
+            .row
+              .col-md-6
+                select.form-control
+                  option(selected='selected', disabled='disabled') City
+                  option Aarhus
+                  option Aalborg
+                  option Copenhagen
+                  option Odense
+                  option Roskilde
+              .col-md-6
+                select.form-control
+                  option(selected='selected', disabled='disabled') University
+                  option Technical University of Denmark
+                  option University of Copenhagen
+                  option Aarhus University
+                  option Aalborg University
+                  option Roskilde University
+        .vertical-space-20px
+        button.btn.btn-custom(type='submit') SIGN UP
+        .vertical-space-20px
+        div
+          p.agree
+            | By creating your Checktom account you agree to our
+            a.policy(href='#') Terms of Use and Privacy Policy

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign Up</title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+
+<style type="text/css">
+/* Make default font Lato for the page */
+    * {
+        font-family: Lato;
+        font-weight:200;
+    }
+/* tooltip settings position, background, width and font size */
+	.tooltip .tooltip-inner {
+			margin-top:-25px;
+	        background-color:#00BDEF;
+	        width:200px;
+	        font-size:10px;
+	}
+/* tooltip arrow settings : default is black; */  
+    .tooltip.right .tooltip-arrow{
+    border-right: 5px solid #00BDEF;
+	}
+/* Or with your email label style; */    
+    .divider {
+        width:420px;
+        text-align:center;
+        font-size:18px;
+        margin-top:-10px;
+    }
+/* Left bar of "Or with your email label" */ 
+    .left {
+        float:left;
+        margin-right: auto;
+        background:black; 
+        border:0;
+        height: 1px; 
+        width:120px;
+    }
+/* Right bar of "Or with your email label" */ 
+    .right {
+        float:right;
+        margin-left: none;
+        background:black; 
+        border:0;
+        height: 1px; 
+        width:120px;
+    }
+/* Div class login */
+    .login{
+        margin: 20px;
+
+    }
+/* set body background */
+    body{
+
+        background-color:#ECF0F1; 
+    }
+/* Top bar config: color, height, bg and bg position; */
+    .top-bar{
+        background-color:white;
+        height :60px; 
+        width:auto;
+        background-attachment:fixed;
+        background-position:top;
+
+    }
+/* Checktom logo config */   
+    .tb.logo {
+    
+    height: 50px;
+    margin: 0px;
+    display: block;
+    background: url('checktomlogo.png') no-repeat;
+    background-position:center 15px;
+     
+    }
+/* 20 px vartical space  */
+    .vertical-space-20px{
+        margin-top: 20px;
+    }
+/* 40 px vartical space  */
+    .vertical-space-40px{
+        margin-top: 40px;
+    }
+/* 10 px vartical space  */
+     .vertical-space-10px{
+        margin-top: 10px;
+    }
+/* rimary button config  */
+    .btn-primary {
+    background:#2F4B94;
+    font-size:16px;
+    }
+
+    .login-lbl-info{
+        color: #16C0EF;
+    }
+     .form-control{
+       font-size:14px; 
+    }
+    .btn-custom {
+    color: #50CD95;
+    background-color: #ECF0F1;
+    border-color: #50CD95;
+    border-width: 2px;
+    width:200px;
+    font-size:16px;
+    }
+    select.form-control
+    {
+    background-color: #50CD95;
+    color: #FFFFFF;
+    }
+    p.signup-lbl-info{
+        color: #16C0EF;
+        
+    }
+    p.create-text{
+        font-size:24px; 
+        font-weight:bold;
+    }
+    p.agree{
+      font-size:14px;  
+    }
+    a.policy
+    {
+        color: #16C0EF;
+    }
+
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('input[type=password][name=pass_tooltip]').tooltip({
+    placement: "right",
+    trigger: "focus" 
+	});
+});
+</script> 
+</head>
+<body>
+<div class="top-bar"><div class="tb logo"></div></div>
+<div class="login" align="center">
+    
+     <div class="vertical-space-40px"></div>
+    <div>
+        <p class=create-text>Create your free Checktom account</p>
+    </div>
+    <div class="vertical-space-40px"></div>
+
+    <div>
+        <button type="button" class="btn btn-primary ">Sign with Facebook</button>
+    </div>
+
+    <div>
+        <div class="vertical-space-10px"></div>
+        <p class="signup-lbl-info"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;We will never post anything to Facebook or share your info with anybody</p>
+    </div>
+    <div class="vertical-space-40px"></div>
+    
+        <div class="divider">
+                <hr class="left"/>or with your email<hr class="right"/>
+        </div>
+    <div class="vertical-space-40px"></div>
+    <div class="vertical-space-40px"></div>
+    <form>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="form-group" >
+                    
+                    <input type="fullname" class="form-control" id="inputFullName" placeholder="Full Name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="form-group" >
+                    
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="form-group">
+                    
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" data-toggle="tooltip"  title="Choose a password at least eight characters long with at least one Uppercase letters" name="pass_tooltip">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <select class="form-control">
+                        <option selected disabled>City</option>
+                          <option>Aarhus</option>
+                          <option>Aalborg</option>
+                          <option>Copenhagen</option>
+                          <option>Odense</option>
+                          <option>Roskilde</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-control">
+                        <option selected disabled>University</option>
+                          <option>Technical University of Denmark</option>
+                          <option>University of Copenhagen</option>
+                          <option>Aarhus University</option>
+                          <option>Aalborg University</option>
+                          <option>Roskilde University</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="vertical-space-20px"></div>
+        <button type="submit" class="btn btn-custom">SIGN UP</button>
+        <div class="vertical-space-20px"></div>
+        <div>
+            <p class="agree">By creating your Checktom account you agree to our <a class="policy" href="#">Terms of Use and Privacy Policy</label></a> </p>
+        </div>
+        
+    </form>
+</div>
+</body>
+</html>                                     
