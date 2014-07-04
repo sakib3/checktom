@@ -9,17 +9,20 @@
     <link href="flatui/bootstrap/css/bootstrap.css" rel="stylesheet">
 <!-- Loading Flat UI -->
     <link href="flatui/css/flat-ui.css" rel="stylesheet">
-    <!-- 
- 	<link rel="stylesheet/less" type="text/css" href="stream.less" />
- 	 -->
+
+  <!-- Global CSS for the page and tiles -->
+  <link rel="stylesheet" href="woomark/css/main.css">
 
 <style type="text/css">
+
+
 	
     * {
         font-family: Lato;
         font-weight:200;
        
     }
+
     /* tooltip settings position, background, width and font size */
     .tooltip .tooltip-inner {
 
@@ -87,7 +90,7 @@
 
     }
 
-    .specify_your_search, .search_results{
+    .specify_your_search, .search_results_header{
         /*margin: 3% 0% 1% 10%;*/
         margin: 3% 5% 1% 5%;
         font-family: Lato;
@@ -95,6 +98,17 @@
         color: #4FCD95;
         font-weight:bold;
     }
+    #search_results{
+        /*margin: 3% 0% 1% 5%;*/
+       
+        width: 100%;
+        font-family: Lato;
+        font-size: 24px;
+        color: #4FCD95;
+        font-weight:bold;
+
+    }
+
 
     #location, #hashtag, #distance, #price{
         font-size: 16px;
@@ -126,15 +140,100 @@
         font-size: 27px;
         font-weight:200;
     }
+    .item{ 
+        width: 230px;
+        background-color: white;
+   
+    }
+    .item_price{
+        font-family: Lato;
+        color: white;
+        font-size: 20px;
+        font-weight:100;
+        height: 48px;
+        background-color: #00BDEF; 
+        text-align: right;
+        padding-right: 5px;
+        padding-top: 8px
+    }
+    .item_details{
+         height:auto;
+    }
+     .item_details .header{
+        font-size: 20px;
+        font-weight:100;
+        color: #4FCD95;
+        padding: 20px 0 0px 12px;
+        margin: 0;
+    }
+       .item_details .body{
+        font-size: 12px;
+        font-weight:100;
+        padding: 0 12px 0 12px;
+        direction:ltr;
+     
+    }
+
+    .item_footer{
+        width:100%;
+        height:43px;
+        background-color: white;
+        border-top:1px solid #EAEBEB;
+        
+        
+    }
+     .item_footer .time{
+
+        vertical-align:middle;
+        display: inline-block;
+        width:33%;
+        font-size: 12px;
+        text-align: center;
+        
+        border-right:1px solid #EAEBEB;
+        height:43px;
+        
+        
+    }
+     .item_footer .view{
+        vertical-align:middle;
+        display: inline-block;
+        width:32%;
+        font-size: 12px;
+        text-align: center;
+        
+        border-right:1px solid #EAEBEB;
+        height:43px;
+        
+     
+    }
+     .item_footer .like{
+        vertical-align:middle;
+        display: inline-block;
+        width:32%;
+        font-size: 12px;
+        text-align: center;
+        height:43px;
+        border-radius: 0 0 3px 0;
+        
+        
+        
+    }
     .form-control {
         
     }
-	.search content img{
-		width: 100px;
-		float: bottom;
-	}
-    .vertical-space-10px{
-        margin-top: 10px;
+    img{
+        
+        -webkit-border-radius: 3px 3px 0 0;
+        -moz-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0;
+    }
+    .loading{
+        width:100%;
+        text-align: center;
+    }
+    .vertical-space-8px{
+        margin-top: 8px;
     }
     .vertical-space-20px{
         margin-top: 20px;
@@ -155,8 +254,7 @@
 
 <div class="top-bar">
     <div class="tb search-bar">
-        
-                 <div class="col-lg-16">
+        <div class="col-lg-16">
                   <div class="form-group">
                     <div class="input-group">                                     
                       <input type="text" class="form-control" placeholder="What you are looking for?" id="search">
@@ -165,21 +263,18 @@
                         </span>
                     </div>
                     </div>
-              </div>
-
-
-
+        </div>
     </div>
     <div class="tb logo"></div>
 </div>
+
 <div class="container">
     <div class="specify_your_search">
         Specify your search
     </div>
+
     <div class="content">
-
-
-        <div class="row">
+         <div class="row">
             <div class="col-xs-4 ">
                 <div class="form-inline">
                     <span class="glyphicon glyphicon-map-marker"></span> Location
@@ -215,21 +310,122 @@
             </div>
         </div>
     </div>
-        <div class="search_results">
+
+    <div class="search_results_header">
             Search result
-        </div>
-	
-        <div class="search content" >
-           <img src="http://dummyimage.com/230x400/000/fff.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
-           <img src="http://dummyimage.com/230x440/de1666/ffc400.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
-           <img src="http://dummyimage.com/230x360/26de16/050505.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
-           <img src="http://dummyimage.com/230x420/16bdde/e300e3.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
-           <img src="http://dummyimage.com/230x400/2e4a4f/f0ebf0.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
-           <img src="http://dummyimage.com/230x480/4b4d2d/0008e8.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
-           <img src="http://dummyimage.com/230x380/4b4d2d/0008e8.jpg&text=Bike" alt="..." class="img-rounded" style="vertical-align: top;">
-        </div>
+    </div>
+</div>
+<div id="main" role="main">
+            <!-- These are our grid blocks -->
+            <ul id="item_list">
+                <div class="item">
+                    <img src="woomark/sample-images/image_1.jpg" width="230">
+                    <div class="item_price">2000 DKK</div>
+                    <div class="item_details">
+                        <p class="header">Retro bike</p>
+                        <p class="body">Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.</p>
+                    </div>
+                    <div class="item_footer">
+                        <div class="time">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-time"></span>
+                            &nbsp;2days
+                        </div>
+                        <div class="view">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            &nbsp;86
+                        </div>
+                        <div class="like">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            &nbsp;122
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="woomark/sample-images/image_2.jpg" width="230">
+                    <div class="item_price">2000 DKK</div>
+                    <div class="item_details">
+                        <p class="header">Retro bike</p>
+                        <p class="body">Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.</p>
+                    </div>
+                    <div class="item_footer">
+                        <div class="time">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-time"></span>
+                            &nbsp;2days
+                        </div>
+                        <div class="view">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            &nbsp;86
+                        </div>
+                        <div class="like">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            &nbsp;122
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="woomark/sample-images/image_3.jpg" width="230">
+                    <div class="item_price">2000 DKK</div>
+                    <div class="item_details">
+                        <p class="header">Retro bike</p>
+                        <p class="body">Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.</p>
+                    </div>
+                    <div class="item_footer">
+                        <div class="time">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-time"></span>
+                            &nbsp;2days
+                        </div>
+                        <div class="view">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            &nbsp;86
+                        </div>
+                        <div class="like">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            &nbsp;122
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="woomark/sample-images/image_4.jpg" width="230">
+                    <div class="item_price">2000 DKK</div>
+                    <div class="item_details">
+                        <p class="header">Retro bike</p>
+                        <p class="body">Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.</p>
+                    </div>
+                    <div class="item_footer">
+                        <div class="time">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-time"></span>
+                            &nbsp;2days
+                        </div>
+                        <div class="view">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            &nbsp;86
+                        </div>
+                        <div class="like">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            &nbsp;122
+                        </div>
+                    </div>
+                </div>
+
+            <!-- End of grid blocks -->
+             </ul>
 
 </div>
+
+<div class="loading">More items are loading</div>
+
     <script src="flatui/js/jquery-1.8.3.min.js"></script>
     <script src="flatui/js/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="flatui/js/jquery.ui.touch-punch.min.js"></script>
@@ -242,6 +438,10 @@
     <script src="flatui/js/jquery.placeholder.js"></script>
     <script src="flatui/js/application.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.js"></script>
+      <!-- Include the WOOMARK -->
+        <!-- Include the plug-in -->
+    <script src="woomark/jquery.wookmark.js"></script>
+    <script src="masonry.pkgd.min.js"></script>
     <script type="text/javascript">
         $( document ).ready(function() {
             var $locationslider = $("#location-slider");
@@ -289,7 +489,33 @@
             
             $("#price-slider .ui-slider-handle:first").tooltip( {title: $priceslider.slider("value"), placement: 'bottom', trigger: "focus"}).tooltip("hide");
 
+            (function ($){
+            
+             var handler = $('#item_list .item');
+
+          handler.wookmark({
+              // Prepare layout options.
+              autoResize: true, // This will auto-update the layout when the browser window is resized.
+              container: $('#main'), // Optional, used for some extra CSS styling
+              offset: 10, // Optional, the distance between grid items
+              outerOffset: 10, // Optional, the distance to the containers border
+              itemWidth: 230 // Optional, the width of a grid item
+          });
+
+          // Capture clicks on grid items.
+          handler.click(function(){
+            // Randomize the height of the clicked item.
+            //var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
+            //$(this).css('height', newHeight+'px');
+
+            // Update the layout.
+            //handler.wookmark();
+          });
+
+            })(jQuery);
+
         });
+ 
     </script>
 </body>
 </html>                                     
