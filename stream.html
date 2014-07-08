@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sign In</title>
+<title>Steam page</title>
 
 <!-- Loading Bootstrap -->
     <link href="flatui/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 <style type="text/css">
 
 
-	
+    
     * {
         font-family: Lato;
         font-weight:200;
@@ -34,7 +34,7 @@
     }
 /* tooltip arrow settings : default is black; */  
     .tooltip.bottom .tooltip-arrow{
-    border-bottom: 10px solid #EBEDEE;
+        border-bottom: 10px solid #EBEDEE;
     }
     body{
         background-color:#ECF0F1; 
@@ -42,33 +42,21 @@
     
     /* This is a single-line comment */
     .top-bar{
+        
         background-color:white;
         height :60px; 
         width:auto;
         background-attachment:fixed;
         background-position:top;
     }
-    .tb.search-bar{
-        margin-top: 8px;
-        margin-left: 10%;
-        height:44px;
-        width:220px;
-        float:left;
-        
+  
+    .top-bar.right-bar{
+        display:inline-block;
+        float:right;
+        width:0px;
     }
-    .tb.search-bar button input{
-        background: #00BDEF;
-        color: #FFFFFF;
-        font-weight: lighter;
-        font-size: 14px;
-        
-    }
-    .tb.search-bar input{
+    .top-bar.logo {
 
-        width:220px;
-        
-    }
-    .tb.logo {
         height: 50px;
         margin: 0px;
         display: block;
@@ -77,12 +65,12 @@
     }
   
     /*.specify_your_search, .search_results{
-     	margin: 40px 0 40px 0;
-	}*/
+        margin: 40px 0 40px 0;
+    }*/
 /* Margin: top right bottom left*/
     .content{
         /*margin: 0% 10% 0 10%;*/
-        margin: 0% 5% 0 5%;
+        margin: 0% 165px 0 165px;
         background-color: white; 
         padding-top:3%;
         padding-right:3%;
@@ -92,7 +80,7 @@
 
     .specify_your_search, .search_results_header{
         /*margin: 3% 0% 1% 10%;*/
-        margin: 3% 5% 1% 5%;
+        margin: 25px 0 1% 165px;
         font-family: Lato;
         font-size: 24px;
         color: #4FCD95;
@@ -126,7 +114,7 @@
     }
     .match{
        float: right; 
-	   text-align:right; 
+       text-align:right; 
 
     }
     .match h1{
@@ -149,11 +137,11 @@
         font-family: Lato;
         color: white;
         font-size: 20px;
-        font-weight:100;
+        font-weight:400;
         height: 48px;
         background-color: #00BDEF; 
         text-align: right;
-        padding-right: 5px;
+        padding-right: 10px;
         padding-top: 8px
     }
     .item_details{
@@ -161,16 +149,17 @@
     }
      .item_details .header{
         font-size: 20px;
-        font-weight:100;
+        font-weight:400;
         color: #4FCD95;
-        padding: 20px 0 0px 12px;
+        padding: 15px 15px 5px 15px;
         margin: 0;
     }
        .item_details .body{
         font-size: 12px;
-        font-weight:100;
-        padding: 0 12px 0 12px;
+        font-weight:300;
+        padding: 0 15px 0 15px;
         direction:ltr;
+        line-height: 1.5em;
      
     }
 
@@ -210,7 +199,7 @@
      .item_footer .like{
         vertical-align:middle;
         display: inline-block;
-        width:32%;
+        width:31%;
         font-size: 12px;
         text-align: center;
         height:43px;
@@ -241,55 +230,85 @@
     .vertical-space-40px{
         margin-top: 40px;
     }
-    @media (max-width: 480px) { 
-	    .tb.search-bar{
-	        
-	        margin-left: 0%;
-	        
-	    }
+    
+    @media (max-width: 600px) { 
+        
+             .content, .specify_your_search, .search_results_header{
+  
+                        margin: 0 20px 0 20px;
+                        
+                            
+            }
     }
 </style>
 </head>
 <body >
 
 <div class="top-bar">
-    <div class="tb search-bar">
-        <div class="col-lg-16">
-                  <div class="form-group">
-                    <div class="input-group">                                     
-                      <input type="text" class="form-control" placeholder="What you are looking for?" id="search">
-                      <span class="input-group-btn">
-                            <button type="submit" class="btn"><span class="fui-search"></span></button>
-                        </span>
-                    </div>
-                    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="search_box" style="float: left;width:240px; margin-left:165px; margin-top: 9px;">
+                 <div class="form-group">
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="What you are looking for?" id="search">
+                              <span class="input-group-btn">
+                                    <button type="submit" class="btn"><span class="fui-search"></span></button>
+                              </span>
+                            </div>
+                </div>
+            </div>
+            <div id="logo" style="position: absolute;left: 40%; margin-top: 9px; ">
+                    <img src="checktomlogo.png">
+            </div>
+            <div id="right_bar" style="float:right; margin-right:165px;">
+                <div style="display: inline">
+                      <ul class="nav navbar-nav">
+                        <li>
+
+                          <a href="#">
+                            <span class="glyphicon glyphicon-bell" style="color:#c9c9c9; font-size: 35px;"></span>
+                            <!-- Indicator with number -->
+
+                          </a>
+
+                        </li>
+                        <li>
+                            <span class="navbar-new" style="margin:15px 22px 0 0;">2</span>
+                        </li>
+                      </ul>
+                      <span class="fui-user" style="font-size: 35px; color:#c9c9c9;"></span>
+                </div>
+            </div>
+            <div style="float:right; margin-top: 9px; ">
+                <button class="btn btn-embossed btn-primary" >Add New Item</button>
+            </div>
         </div>
     </div>
-    <div class="tb logo"></div>
 </div>
 
-<div class="container">
+<div class="mycontainer">
     <div class="specify_your_search">
         Specify your search
     </div>
 
     <div class="content">
          <div class="row">
-            <div class="col-xs-4 ">
+            <div class="col-md-4 ">
                 <div class="form-inline">
                     <span class="glyphicon glyphicon-map-marker"></span> Location
                 </div>
-                <input type="text" class="form-control" id="location" placeholder="Your place" style="width:200px height=40px">
+                <input type="text" class="form-control" id="location" placeholder="Your place" style="width:200px height:40px">
                 <div class="form-inline">
                     <span class="glyphicon glyphicon-send"></span> Distance
                 </div>
-                <div id="location-slider" class="ui-slider" style="width:190px height=12px">
+                <div id="distance-slider" class="ui-slider" style="width:190px height:12px">
                     <span class="ui-slider-value first">0</span>
+
                     <span class="ui-slider-value last">&infin;</span>
                 </div>
             </div>
            
-            <div class="col-xs-5">
+            <div class="col-md-5">
                 <div class="form-inline">
                     <span class="glyphicon glyphicon-tags"></span> &nbsp;Hashtag
                 </div>
@@ -297,12 +316,12 @@
                 <div class="form-inline">
                     <span class="glyphicon glyphicon-credit-card"></span> Price
                 </div>
-                <div id="price-slider" class="ui-slider" style="width:190px height=12px">
+                <div id="price-slider" class="ui-slider" style="width:190px height:12px">
                     <span class="ui-slider-value first">0</span>
                     <span class="ui-slider-value last">&infin;</span>
                 </div>
             </div>
-            <div class="col-xs-3 ">
+            <div class="col-md-3 ">
                 <div class="match">
                     <h3>Matches</h3>
                     <h1>63</h1>
@@ -444,15 +463,16 @@
     <script src="masonry.pkgd.min.js"></script>
     <script type="text/javascript">
         $( document ).ready(function() {
-            var $locationslider = $("#location-slider");
+            var $distanceslider = $("#distance-slider");
             var $priceslider = $("#price-slider");
             //$priceslider.slider();
 
             
-            $locationslider.slider({
+            $distanceslider.slider({
                     min: 0,
                     max: 15,
                     value: 1,
+                    step:5,
                     orientation: "horizontal",
                     range: "min",
                     slide: function(event, ui) {
@@ -468,6 +488,7 @@
                     slide: repositionTooltip, 
                     stop: hideTooltip 
             });
+
             function repositionTooltip( e, ui ){
                 var div = $(ui.handle).data("bs.tooltip").$tip[0];
                 var pos = $.extend({}, $(ui.handle).offset(), { width: $(ui.handle).get(0).offsetWidth,
@@ -481,6 +502,7 @@
         
                 $(div).find(".tooltip-inner").text( ui.value );        
             }
+
              function hideTooltip( e, ui ){
                 $("#price-slider .ui-slider-handle:first").tooltip().tooltip("hide");
                 console.log('tooltip is hiding');
@@ -491,28 +513,31 @@
 
             (function ($){
             
-             var handler = $('#item_list .item');
+                    var handler = $('#item_list .item');
 
-          handler.wookmark({
-              // Prepare layout options.
-              autoResize: true, // This will auto-update the layout when the browser window is resized.
-              container: $('#main'), // Optional, used for some extra CSS styling
-              offset: 10, // Optional, the distance between grid items
-              outerOffset: 10, // Optional, the distance to the containers border
-              itemWidth: 230 // Optional, the width of a grid item
-          });
+                    handler.wookmark({
+                      // Prepare layout options.
+                      autoResize: true, // This will auto-update the layout when the browser window is resized.
+                      container: $('#main'), // Optional, used for some extra CSS styling
+                      offset: 10, // Optional, the distance between grid items
+                      outerOffset: -35, // Optional, the distance to the containers border
+                      itemWidth: 230 // Optional, the width of a grid item
+                    });
 
-          // Capture clicks on grid items.
-          handler.click(function(){
-            // Randomize the height of the clicked item.
-            //var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
-            //$(this).css('height', newHeight+'px');
+                  // Capture clicks on grid items.
+                    handler.click(function(){
+                    // Randomize the height of the clicked item.
+                    //var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
+                    //$(this).css('height', newHeight+'px');
 
-            // Update the layout.
-            //handler.wookmark();
-          });
+                    // Update the layout.
+                    //handler.wookmark();
+                    });
 
             })(jQuery);
+
+            // Add segments to a slider
+
 
         });
  
