@@ -235,15 +235,16 @@ body{
 #modal_item_dialog{
     width:950px;
     background:transparent;
+
 }
 #modal_item_content{
     background:transparent;
     border-width: 0;
+
 }
 #modal_item_header{
     height:100px;
     background: white;
-
 }
 #modal_item_header h3{
     color: #4FCD95;
@@ -255,22 +256,51 @@ body{
 #modal_item_header #modal_footer{
     font-size: 12px;
     margin: 0 0 0px 40px;
+    color: #6e7a87;
 }
 #modal_item_div{
     height: 500px;
     background: white;
-
+    padding-top: 20px;
 }
 #modal_item_img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+
+
 }
 #profile, #down_to_profile{
     height: 230px;
     background: white;
+    position: relative;
+    padding: 25px 0 0 0;
+}
+#profile #photo img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+
 
 }
+
+#profile #name{
+    color: #00bdef;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    bottom:0px;
+    margin-bottom: 10px;
+    display:block;
+    width:100%;
+    text-align: center;
+
+}
+
 #modal_item_details{
     height:220px;
     background: white;
@@ -281,20 +311,25 @@ body{
 #modal_item_details #text{
     font-size: 16px;
     color: #6e7a87;
+    font-weight: 300;
+    align: "justify";
 }
+
 #modal_item_details #btn_interested{
     position:absolute;
     bottom:45px;
     right: 25px;
     color: #50CD95;
     background-color: white;
-    border-color: #50CD95;
-    border-width: 5px;
     width:185px;
     font-size:20px;
-
+    border: solid;
+    border-color: #50CD95;
+    border-width: 2px;
+    padding:5px 5px;
 
 }
+
 #modal_item_details #footer{
     font-size: 13px;
     color: #bfc5c6;
@@ -309,7 +344,6 @@ body{
     border: 10px solid;
     border-color:#4FCD95;
     position:relative;
-
 }
 #conversation #camera {
     color: #bdc3c7;
@@ -337,6 +371,13 @@ body{
     width:49.5%;
     float: right;
     height:380px;
+}
+/*Following divs have boarder*/
+#specify_your_search_content,#right_to_conversation,#modal_item_header,#modal_item_div,#profile, #down_to_profile,#modal_item_details,#conversation{
+
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
 }
 /*Media Query*/
 @media (max-width: 980px) {

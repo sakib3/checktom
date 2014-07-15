@@ -76,9 +76,9 @@
 
                             <span id="modal_footer">
                                 <span class="glyphicon glyphicon-time"></span>
-                                &nbsp;2days
+                                &nbsp;2days&nbsp;&nbsp;&nbsp;
                                 <span class="glyphicon glyphicon-eye-open"></span>
-                                &nbsp;86
+                                &nbsp;86&nbsp;&nbsp;&nbsp;
                                 <span class="glyphicon glyphicon-heart-empty"></span>
                                 &nbsp;122
                             </span>
@@ -94,7 +94,14 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div id="profile"></div>
+                    <div id="profile">
+                        <div id="photo">
+                            <img src="http://placekitten.com/g/200/400">
+                        </div>
+                        <p id="name">
+                            Mehdi Zarandi
+                        </p>
+                    </div>
                     <div style="height:10px;"></div>
                     <div id="down_to_profile"></div>
                 </div>
@@ -105,7 +112,7 @@
                         <p id="text">
                             Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.
                         </p>
-                        <button id="btn_interested"class="btn btn-custom"> I am interested</button>
+                        <button id="btn_interested"class="btn btn-custom"> I'm interested</button>
                         <span id="footer">Bike&nbsp;&nbsp;Retro&nbsp;&nbsp;Brooks&nbsp;&nbsp;Fixi&nbsp;&nbsp;Vintage</span>
                     </div>
                     <div style="height:10px;"></div>
@@ -134,6 +141,9 @@
     </div>
 </div>
 <!-- Large modal ends here -->
+<div id="placeholder_add_new_item">
+    <div style="height:30px;background: red;"></div>
+</div>
 <div id="specify_your_search_header">
         Specify your search
 </div>
@@ -350,13 +360,21 @@
                 $(div).find(".tooltip-inner").text( ui.value );        
             }
 
-             function hideTooltip( e, ui ){
+            function hideTooltip( e, ui ){
                 $("#price-slider .ui-slider-handle:first").tooltip().tooltip("hide");
                 console.log('tooltip is hiding');
             }
     
             
             $("#price-slider .ui-slider-handle:first").tooltip( {title: $priceslider.slider("value"), placement: 'bottom', trigger: "focus"}).tooltip("hide");
+
+            function hidePlaceholderAddNewItem(){
+                $("#placeholder_add_new_item").hide();
+            }
+
+            function showPlaceholderAddNewItem(){
+                $("#placeholder_add_new_item").show();
+            }
 
             (function ($){
             
@@ -390,6 +408,12 @@
                     $("#modal_item_div").empty();
                     //load image in modal placeholder
                     $("#modal_item_div").append("<img id='modal_item_img' src="+$image+">");
+                    });
+                    //hide the div placeholder for add new item
+                    hidePlaceholderAddNewItem();
+                    //AddNewItem button fires the following function
+                    $( "#add_new_item" ).click(function() {
+                        showPlaceholderAddNewItem();
                     });
 
             })(jQuery);
