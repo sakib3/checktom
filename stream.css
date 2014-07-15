@@ -228,7 +228,116 @@ body{
 .vertical-space-40px{
     margin-top: 40px;
 }
+/* Css for Modal section*/
+#modal_item{
+    opacity:1;
+}
+#modal_item_dialog{
+    width:950px;
+    background:transparent;
+}
+#modal_item_content{
+    background:transparent;
+    border-width: 0;
+}
+#modal_item_header{
+    height:100px;
+    background: white;
 
+}
+#modal_item_header h3{
+    color: #4FCD95;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 20px 0 0 40px;
+    margin: 0;
+}
+#modal_item_header #modal_footer{
+    font-size: 12px;
+    margin: 0 0 0px 40px;
+}
+#modal_item_div{
+    height: 500px;
+    background: white;
+
+}
+#modal_item_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#profile, #down_to_profile{
+    height: 230px;
+    background: white;
+
+}
+#modal_item_details{
+    height:220px;
+    background: white;
+    padding: 25px 25px 25px 25px;
+    position:relative;
+
+}
+#modal_item_details #text{
+    font-size: 16px;
+    color: #6e7a87;
+}
+#modal_item_details #btn_interested{
+    position:absolute;
+    bottom:45px;
+    right: 25px;
+    color: #50CD95;
+    background-color: white;
+    border-color: #50CD95;
+    border-width: 5px;
+    width:185px;
+    font-size:20px;
+
+
+}
+#modal_item_details #footer{
+    font-size: 13px;
+    color: #bfc5c6;
+    position: absolute;
+    bottom: 10px;
+}
+#conversation{
+    background: white;
+    width:49.5%;
+    float: left;
+    height:380px;
+    border: 10px solid;
+    border-color:#4FCD95;
+    position:relative;
+
+}
+#conversation #camera {
+    color: #bdc3c7;
+    background-color: #ffffff;
+    padding: 5px 0 8px 10px;
+    font-size: 24px;
+}
+#conversation #control_group{
+    width:100%;
+    padding: 0 8px 0 8px;
+    position:absolute;
+    bottom:15px;
+}
+#conversation #control_group .input-group{
+    width:370px;
+    float:left;
+
+}
+#conversation #control_group #send{
+    width:60px;
+    float:left;
+}
+#right_to_conversation{
+    background: white;
+    width:49.5%;
+    float: right;
+    height:380px;
+}
 /*Media Query*/
 @media (max-width: 980px) {
 

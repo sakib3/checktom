@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Item Detail View</title>
+
+    <!-- Loading Bootstrap -->
+    <link href="flatui/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+    <link href="flatui/css/flat-ui.css" rel="stylesheet">
+
+    <!-- Global CSS for the page and tiles -->
+    <link rel="stylesheet" href="woomark/css/main.css">
+    <!-- stylesheet for stream page -->
+    <link rel="stylesheet" href="stream.css">
+</head>
+<body >
+<div class="top-bar">
+    <div class="row">
+        <div class="col-md-4">
+            <div id="search_box" >
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="What you are looking for?" id="search">
+                              <span class="input-group-btn">
+                                    <button type="submit" class="btn"><span class="fui-search"></span></button>
+                              </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="logo">
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="right_bar" >
+                <span id="user" class="fui-user"></span>
+                <button id="add_new_item" class="btn btn-embossed btn-primary">Add New Item</button>
+
+                <div id="notification" style="display: inline">
+                    <ul id="notification_bar" class="nav navbar-nav">
+                        <li>
+                            <a href="#">
+                                <span id="bell" class="glyphicon glyphicon-bell" ></span>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <!-- Unread Indicator with number -->
+                            <span id="unread"class="navbar-new" >2</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="row"></div>
+<!-- Large modal -->
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:950px;">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+
+<script src="flatui/js/jquery-1.8.3.min.js"></script>
+<script src="flatui/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="flatui/js/jquery.ui.touch-punch.min.js"></script>
+<script src="flatui/js/bootstrap.min.js"></script>
+<script src="flatui/js/bootstrap-select.js"></script>
+<script src="flatui/js/bootstrap-switch.js"></script>
+<script src="flatui/js/flatui-checkbox.js"></script>
+<script src="flatui/js/flatui-radio.js"></script>
+<script src="flatui/js/jquery.tagsinput.js"></script>
+<script src="flatui/js/jquery.placeholder.js"></script>
+<script src="flatui/js/application.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.js"></script>
+<!-- Include the WOOMARK -->
+<!-- Include the plug-in -->
+<script src="woomark/jquery.wookmark.js"></script>
+<script src="masonry.pkgd.min.js"></script>
+
+</body>
+</html>

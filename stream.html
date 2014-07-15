@@ -40,7 +40,7 @@
            <div id="right_bar" >
                     <span id="user" class="fui-user"></span>
                     <button id="add_new_item" class="btn btn-embossed btn-primary">Add New Item</button>
-                    
+
                     <div id="notification" style="display: inline">
                          <ul id="notification_bar" class="nav navbar-nav">
                              <li>
@@ -57,13 +57,83 @@
                          </ul>
                     </div>
             </div>
-            
+
         </div>
 
     </div>
 </div>
 <div class="row"></div>
 
+<!-- Large modal -->
+
+<div id="modal_item" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+    <div id="modal_item_dialog" class="modal-dialog modal-lg">
+        <div id="modal_item_content"class="modal-content" >
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div id="modal_item_header">
+                        <h3>Retro Bike</h3>
+
+                            <span id="modal_footer">
+                                <span class="glyphicon glyphicon-time"></span>
+                                &nbsp;2days
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                &nbsp;86
+                                <span class="glyphicon glyphicon-heart-empty"></span>
+                                &nbsp;122
+                            </span>
+
+
+                    </div>
+                    <div style="height:10px;"></div>
+                </div>
+                <div class="col-md-9 ">
+                    <div id="modal_item_div" >
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div id="profile"></div>
+                    <div style="height:10px;"></div>
+                    <div id="down_to_profile"></div>
+                </div>
+
+                <div class="col-md-12 ">
+                    <div style="height:10px;"></div>
+                    <div id="modal_item_details">
+                        <p id="text">
+                            Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.
+                        </p>
+                        <button id="btn_interested"class="btn btn-custom"> I am interested</button>
+                        <span id="footer">Bike&nbsp;&nbsp;Retro&nbsp;&nbsp;Brooks&nbsp;&nbsp;Fixi&nbsp;&nbsp;Vintage</span>
+                    </div>
+                    <div style="height:10px;"></div>
+                    <div id="conversation">
+                        <div id="control_group">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button id="camera" class="btn btn-default btn" type="button">
+                                        <span class="glyphicon glyphicon-camera" ></span>
+                                    </button>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Type your message here...">
+
+                            </div>
+                            <button id="send" class="btn btn-embossed btn-primary" type="button">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                    <div id="right_to_conversation"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Large modal ends here -->
 <div id="specify_your_search_header">
         Specify your search
 </div>
@@ -114,8 +184,33 @@
 <div id="main" role="main">
             <!-- Grid blocks -->
             <ul id="item_list">
-                <div class="item">
-                    <img class="item_image" src="woomark/sample-images/image_1.jpg" width="230">
+                <div  class="item">
+                    <img id=1 class="item_image" src="woomark/sample-images/image_1.jpg" width="230">
+                    <div class="item_price">1000 DKK</div>
+                    <div class="item_details">
+                        <p class="header">Retro bike</p>
+                        <p class="body">Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.</p>
+                    </div>
+                    <div class="item_footer">
+                        <div class="time">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-time"></span>
+                            &nbsp;2days
+                        </div>
+                        <div class="view">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            &nbsp;86
+                        </div>
+                        <div class="like">
+                            <div class="vertical-space-8px"></div>
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            &nbsp;122
+                        </div>
+                    </div>
+                </div>
+                <div  class="item">
+                    <img id=2 class="item_image" src="woomark/sample-images/image_2.jpg" width="230">
                     <div class="item_price">2000 DKK</div>
                     <div class="item_details">
                         <p class="header">Retro bike</p>
@@ -140,8 +235,8 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img class="item_image" src="woomark/sample-images/image_2.jpg" width="230">
-                    <div class="item_price">2000 DKK</div>
+                    <img id=3 class="item_image" src="woomark/sample-images/image_3.jpg" width="230">
+                    <div class="item_price">3000 DKK</div>
                     <div class="item_details">
                         <p class="header">Retro bike</p>
                         <p class="body">Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.</p>
@@ -165,33 +260,8 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img class="item_image" src="woomark/sample-images/image_3.jpg" width="230">
-                    <div class="item_price">2000 DKK</div>
-                    <div class="item_details">
-                        <p class="header">Retro bike</p>
-                        <p class="body">Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.</p>
-                    </div>
-                    <div class="item_footer">
-                        <div class="time">
-                            <div class="vertical-space-8px"></div>
-                            <span class="glyphicon glyphicon-time"></span>
-                            &nbsp;2days
-                        </div>
-                        <div class="view">
-                            <div class="vertical-space-8px"></div>
-                            <span class="glyphicon glyphicon-eye-open"></span>
-                            &nbsp;86
-                        </div>
-                        <div class="like">
-                            <div class="vertical-space-8px"></div>
-                            <span class="glyphicon glyphicon-heart-empty"></span>
-                            &nbsp;122
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img class="item_image" src="woomark/sample-images/image_4.jpg" width="230">
-                    <div class="item_price">2000 DKK</div>
+                    <img id=4 class="item_image" src="woomark/sample-images/image_4.jpg" width="230">
+                    <div class="item_price">4000 DKK</div>
                     <div class="item_details">
                         <p class="header">Retro bike</p>
                         <p class="body">Totally restored retro fixi-bike with premium parts, no gear, 28” aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminimum parts.</p>
@@ -309,6 +379,17 @@
 
                     // Update the layout.
                     //handler.wookmark();
+
+                    //show the moodle
+                    $('.bs-example-modal-lg').modal({
+                        show: true
+                    })
+                    //get the image
+                    $image=$('img', this)[0].src;
+                    //clear the modal placeholder
+                    $("#modal_item_div").empty();
+                    //load image in modal placeholder
+                    $("#modal_item_div").append("<img id='modal_item_img' src="+$image+">");
                     });
 
             })(jQuery);
