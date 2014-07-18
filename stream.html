@@ -96,7 +96,7 @@
                 <div class="col-md-3">
                     <div id="profile">
                         <div id="photo">
-                            <img src="http://placekitten.com/g/200/400">
+                            <img src="img/profile.png">
                         </div>
                         <p id="name">
                             Mehdi Zarandi
@@ -141,8 +141,78 @@
     </div>
 </div>
 <!-- Large modal ends here -->
-<div id="placeholder_add_new_item">
-    <div style="height:30px;background: red;"></div>
+<div id="AddNewItem">
+    <div class="container">
+        <div class="row">
+            <div id="whiteboard" class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+
+                <div class="col-md-3">
+
+                    <div id="left">
+                        <div id="headline">
+                            <p>Headline</p>
+                            <input type="text" placeholder="Type the headline" class="form-control" />
+                        </div>
+                        <div id="location">
+                            <p>Location</p>
+                            <input type="text" placeholder="Select Your Location" class="form-control" />
+                        </div>
+                        <div id="price">
+                            <p>Price</p>
+                            <input type="text" placeholder="0" class="form-control" />
+                        </div>
+                        <div id="negotiable">
+                            <label class="checkbox" for="checkbox1">
+                                <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+                                The price is negotialble
+                            </label>
+                        </div>
+                        <div id="giveaway">
+                            <label class="checkbox" for="checkbox1">
+                                <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+                                Give away for free
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="middle">
+                        <div id="description">
+                            <p>Description</p>
+                            <textarea class="form-control" rows="6" placeholder="Give a brief description about this item"></textarea>
+                        </div>
+                        <div id="hashtag">
+                            <p>Hashtag</p>
+                            <input style="height:48px;" name="tagsinput" class="tagsinput" value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="right">
+                        <div class="picture">
+                            <p>Picture</p>
+                            <button class="btn btn-wide btn-primary mrm">
+                                Upload
+                            </button>
+                        </div>
+                        <div class="social">
+                            <p>Share with friends</p>
+                            <a href="#fakelink" class="btn btn-wide btn-primary mrm">
+                                <span class="fui-facebook"></span>
+                                On Facebook
+                            </a>
+                        </div>
+                        <div id="submit">
+                            <button class="btn btn-wide btn-primary mrm">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 <div id="specify_your_search_header">
         Specify your search
@@ -313,11 +383,17 @@
     <script src="flatui/js/jquery.tagsinput.js"></script>
     <script src="flatui/js/jquery.placeholder.js"></script>
     <script src="flatui/js/application.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.js"></script>
+
+    -->
+
       <!-- Include the WOOMARK -->
         <!-- Include the plug-in -->
     <script src="woomark/jquery.wookmark.js"></script>
-    <script src="masonry.pkgd.min.js"></script>
+        <!-- <script src="masonry.pkgd.min.js"></script>
+
+        -->
+
     <script type="text/javascript">
         $( document ).ready(function() {
             var $distanceslider = $("#distance-slider");
@@ -368,12 +444,12 @@
             
             $("#price-slider .ui-slider-handle:first").tooltip( {title: $priceslider.slider("value"), placement: 'bottom', trigger: "focus"}).tooltip("hide");
 
-            function hidePlaceholderAddNewItem(){
-                $("#placeholder_add_new_item").hide();
+            function hideAddNewItem(){
+                $("#AddNewItem").hide();
             }
 
-            function showPlaceholderAddNewItem(){
-                $("#placeholder_add_new_item").show();
+            function showAddNewItem(){
+                $("#AddNewItem").show();
             }
 
             (function ($){
@@ -410,12 +486,14 @@
                     $("#modal_item_div").append("<img id='modal_item_img' src="+$image+">");
                     });
                     //hide the div placeholder for add new item
-                    hidePlaceholderAddNewItem();
+                    hideAddNewItem();
                     //AddNewItem button fires the following function
                     $( "#add_new_item" ).click(function() {
-                        showPlaceholderAddNewItem();
+                        showAddNewItem();
                     });
-
+                    $( "#AddNewItem #submit" ).click(function() {
+                        hideAddNewItem();
+                    });
             })(jQuery);
 
             // Add segments to a slider
