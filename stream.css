@@ -228,6 +228,7 @@ body{
 .vertical-space-40px{
     margin-top: 40px;
 }
+
 /* Css for Modal section*/
 #modal_item{
     opacity:1;
@@ -315,21 +316,24 @@ body{
     align: "justify";
 }
 
-#modal_item_details #btn_interested{
+
+#modal_item_details .btn-primary{
     position:absolute;
     bottom:45px;
     right: 25px;
-    color: #50CD95;
-    background-color: white;
     width:185px;
     font-size:20px;
-    border: solid;
-    border-color: #50CD95;
-    border-width: 2px;
-    padding:5px 5px;
+    color: #4fcd95;
+    background-color: #ffffff;
+    border: 2px solid #4fcd95;
 
 }
 
+#modal_item_details .btn-primary:hover, .btn-primary.hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{
+    color: #ffffff;
+    background-color: #4fcd95;
+    border-color: #4fcd95;
+}
 #modal_item_details #footer{
     font-size: 13px;
     color: #bfc5c6;
