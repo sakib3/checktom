@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="woomark/css/main.css">
     <!-- stylesheet for stream page -->
    <link rel="stylesheet" href="stream.css">
+   <!-- chat style sheet-->
+    <link  rel="stylesheet" href="chat.css">
 </head>
 <body >
 
@@ -117,6 +119,51 @@
                     </div>
                     <div style="height:10px;"></div>
                     <div id="conversation">
+
+                        <div id="chat_container">
+                            <div id="bg">
+                                <div class="bubbledLeft">
+                                    Hi
+                                </div>
+                                <div class="bubbledRight">
+                                    Hi there yourself
+                                </div>
+                                <div class="bubbledLeft">
+                                    Do you speak Latin?
+                                </div>
+                                <div class="bubbledRight">
+                                    Yes
+                                </div>
+                                <div class="bubbledLeft">
+                                    Prove it
+                                </div>
+                              
+                                <div class="bubbledLeft">
+                                    Take it all back, you do speak latin.
+                                </div>
+                                <div class="bubbledLeft">
+                                    Hi
+                                </div>
+                                <div class="bubbledRight">
+                                    Hi there yourself
+                                </div>
+                                <div class="bubbledLeft">
+                                    Do you speak Latin?
+                                </div>
+                                <div class="bubbledRight">
+                                    Yes
+                                </div>
+                                <div class="bubbledLeft">
+                                    Prove it
+                                </div>
+                              
+                                <div class="bubbledLeft">
+                                    Take it all back, you do speak latin.
+                                </div>
+                                
+                            </div>
+
+                        </div>
                         <div id="control_group">
                             <div class="input-group">
                                 <span class="input-group-btn">
@@ -124,7 +171,8 @@
                                         <span class="glyphicon glyphicon-camera" ></span>
                                     </button>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Type your message here...">
+                                <input id="msg" type="text" class="form-control" placeholder="Type your message here...">
+                                <input id="file" type="file" >
 
                             </div>
                             <button id="send" class="btn btn-embossed btn-primary" type="button">
@@ -493,6 +541,34 @@
                     });
                     $( "#AddNewItem #submit" ).click(function() {
                         hideAddNewItem();
+                    });
+
+                    //file uploader for conversation
+                    $('#camera').click(function() {
+                        $("#file")
+                                .trigger('click');
+                    });
+
+                    $("#file").change(function(e) {
+                        $("#msg")
+                                .val($(this).val());
+                        //Get the first (and only one) file element
+                        //that is included in the original event
+                        var file = e.originalEvent.target.files[0],
+                                reader = new FileReader();
+                        //When the file has been read...
+                        reader.onload = function(evt){
+                            //Because of how the file was read,
+                            //evt.target.result contains the image in base64 format
+                            //Nothing special, just creates an img element
+                            //and appends it to the DOM so my UI shows
+                            //that I posted an image.
+                            //send the image via Socket.io
+                            //socket.emit('user image', evt.target.result);
+                            console.log(evt.target.result);
+                        };
+                        //And now, read the image and base64
+                        reader.readAsDataURL(file);
                     });
             })(jQuery);
 

@@ -1,0 +1,67 @@
+	#conversation #chat_container{
+		
+		overflow:scroll;
+		height:290px;
+        background: white;
+        z-index: -500;
+
+	}
+	#conversation #chat_container .bubbledLeft,#conversation #chat_container .bubbledRight{
+		margin: 3px 5px 10px 5px;
+		padding: 3px 5px 3px 5px;
+		max-width: 80%;
+		clear: both;
+	
+	}
+
+	#conversation #chat_container .bubbledLeft{
+		z-index: 2;
+		position: relative; 
+		float: left;
+		margin-right: auto;
+		text-align:left;
+		padding: 9px 15px 9px 20px; /*position within the border*/
+		font-family: Lato;
+		font-weight:200;
+	}
+	#conversation #chat_container .bubbledLeft:before{
+		z-index: -1;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		content: "";
+
+		border-width: 8px 10px 8px 17px; 
+		border-image: url(speech_bubble_left.png) 8 10 8 17 stretch stretch;
+		-webkit-border-image: url(speech_bubble_left.png) 8 10 8 17 stretch stretch;
+		-moz-border-image: url(speech_bubble_left.png) 8 10 8 17 stretch stretch;
+		-o-border-image: url(speech_bubble_left.png) 8 10 8 17 stretch stretch;
+	}
+	#conversation #chat_container .bubbledRight{
+		z-index: 2;
+		position: relative; 
+		float: right;
+		margin-left: auto;
+		text-align:left;
+		padding: 9px 20px 9px 15px; /*position within the border*/
+		color: white;
+		font-family: Lato;
+		font-weight:200;
+	}
+	#conversation #chat_container .bubbledRight:before{
+		z-index: -1;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		content: "";
+
+		border-width: 8px 17px 8px 10px; 
+		border-image: url(speech_bubble_right.png) 8 17 8 10 stretch stretch ;
+		-o-border-image: url(speech_bubble_right.png) 8 17 8 10 stretch stretch ;
+		-moz-border-image: url(speech_bubble_right.png) 8 17 8 10 stretch stretch ;
+		-webkit-border-image: url(speech_bubble_right.png) 8 17 8 10 stretch stretch ;
+	}

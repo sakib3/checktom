@@ -341,13 +341,23 @@ body{
     bottom: 10px;
 }
 #conversation{
-    background: white;
+    
     width:49.5%;
     float: left;
     height:380px;
     border: 10px solid;
     border-color:#4FCD95;
     position:relative;
+    background: white;
+}
+#bg{
+    z-index: -99;
+    background: white;
+    width:100%;
+    float: left;
+    padding: 5px 0 5px 0;
+    
+   
 }
 #conversation #camera {
     color: #bdc3c7;
@@ -365,6 +375,11 @@ body{
     width:370px;
     float:left;
 
+}
+#conversation #file {
+    display:block;
+    height:0;
+    width:0;
 }
 #conversation #control_group #send{
     width:60px;
