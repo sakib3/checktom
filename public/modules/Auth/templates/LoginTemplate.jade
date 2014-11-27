@@ -1,0 +1,46 @@
+#navigation
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container
+            .row
+                .col-md-12
+                    .nav-center-horizontally.nav-fixheight
+                        .nav-center-vertically.nav-center-vertically-logofix
+                            a(href='https://checktomtest.nodejitsu.com',onclick='window.location.href = "https://checktomtest.nodejitsu.com";')
+                                img.nav-logo(src='./assets/img/checktomlogo.png')
+#login
+    .login-container
+        .login-content
+            h1
+                | Log in to your Checktom account
+            br
+            br
+            br
+            button#fbButton.btn.btn-social-facebook.mrs
+                // <i class="fui-facebook"></i>
+                | Log in with Facebook
+            .login-fb-promise
+                span.fui-info
+                .login-fb-promise-text
+                    | We will never post anything to Facebook or share your info with anybody
+            .login-split-email
+                table
+                    tbody
+                        tr
+                            td
+                                hr
+                            td.middle
+                                | or with your email
+                            td
+                                hr
+            .login-email-form
+                form#LoginForm
+                    input#login-email.form-control(type='text', placeholder='Email')
+                    br
+                    input#login-password.form-control(type='password', placeholder='Password')
+                    br
+                    button.btn.btn-signin
+                        | SIGN IN
+                    br
+                    p
+                        | Forgot your password?
+                        a(href='#recoverPassword') Recover password

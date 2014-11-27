@@ -1,0 +1,53 @@
+.graybackground
+ #profileSettings
+    .container
+        #ps_close.pull-right
+            span.fui-cross
+        .row
+            .col-md-3
+                .user
+                    #userImg
+                        img#UserImgImg.userPicture(src='')
+                    #userName
+                        p username
+                form#ProfileForm(method='post', enctype='multipart/form-data')
+                    p Upload a new profile image.
+                    input#image(type='file', name='image0', accept='image/*').btn.btn-wide.btn-primary.mrm
+                    br
+                    button#saveChanges.btn.btn-embossed.btn-primary Submit Image
+
+            //
+                .col-md-9
+                    .facebook
+                        h1
+                            | We recommend that you log in with your Facebook to optimize your user-experience and safety
+                        button.btn.btn-social-facebook.mrs
+                            | Sign up with Facebook
+                        p We will never post anything to Facebook or share your info with anybody
+                .col-md-3
+            .col-md-9
+                .settings
+                    .col-md-12
+                        .col-md-3
+                            p Email
+                        .col-md-9
+                            input#profileSettingsEmail.form-control(type='text', placeholder='Email')
+                    .col-md-12
+                        .col-md-3
+                            p Password
+                        .col-md-9
+                            a(href='#recoverPassword') Change my password...
+                    .col-md-12
+                        .col-md-3
+                            p City
+                        .col-md-9
+                            #cityListWrapper
+                                select#cityList.form-control(required='required', type='search')
+                                span.caret(style='position: absolute; border-top-color: white; right: 30px; top: 18px;')
+                    .col-md-12
+                        .col-md-3
+                            p University
+                        .col-md-9
+                            #schoolListWrapper
+                                select#schoolList.form-control(required='required', type='search')
+                                span.caret(style='position: absolute; border-top-color: white; right: 30px; top: 18px;')

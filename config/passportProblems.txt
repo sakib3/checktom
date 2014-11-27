@@ -1,0 +1,27 @@
+[14:59:12] Patrick: Man facebook is a pain in the butt,
+so appearently they decide that some emails are invalid after x amount of time,
+or if they dont respond to spam. and so they mark them as invalid,
+and they wont be returned via graph/oauth/anything.
+the only solution is to then use the "custom" email facebook creates for these users,
+which is their facebookId@facebook.com
+
+So solving this issue by checking if the email field exists,
+and if it doesn't. I just create a facebook id for them.
+
+Gonna see if i can find a way to test the signup with an actual working email account.
+
+FOUND SOLUTION
+
+
+
+
+
+getting photos
+https://github.com/jaredhanson/passport-facebook/issues/9
+
+email issue thread
+http://stackoverflow.com/questions/19073128/facebook-oauth2-does-not-provide-user-email
+
+
+REMEMBER TO LAUNCH THE APP IN FACEBOOK DEV PAGE
+

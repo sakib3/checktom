@@ -1,0 +1,665 @@
+
+body{
+    background-color:#ECF0F1;
+}
+
+* {
+    font-family: Lato;
+    font-weight:200;
+
+}
+
+/* tooltip settings position, background, width and font size */
+.tooltip .tooltip-inner {
+
+    background-color:#EBEDEE;
+    width:60px;
+    height:42px;
+    font-weight:regular;
+    color:#4FCD95;
+}
+/* tooltip arrow settings : default is black; */
+.tooltip.bottom .tooltip-arrow{
+    border-bottom: 10px solid #EBEDEE;
+}
+
+
+/* Top bar */
+/* Top bar consist of ->    :: search_box :: logo :: right_bar ::            */
+.top-bar{
+
+    background-color:white;
+    height :60px;
+    width:auto;
+    background-attachment:fixed;
+    background-position:top;
+}
+/* Search Box */
+#search_box{
+    width:240px;
+    margin:9px 0 0 165px;
+}
+
+/* Logo */
+#logo {
+
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: url('../img/checktomlogo.png') no-repeat;
+    background-position:center 15px;
+}
+
+/* Right Bar and its components */
+#right_bar #user{
+    font-size: 35px;
+    color:#c9c9c9;
+    margin:0 10px 0 -10px;
+}
+#right_bar #add_new_item{
+    margin-bottom:20px;
+}
+#right_bar #bell{
+    color:#c9c9c9;
+    font-size: 35px;
+}
+#right_bar #unread{
+    margin:15px 22px 0 0;
+}
+
+/* Content*/
+#specify_your_search_content{
+
+    margin: 0% 165px 0 165px;
+    background-color: white;
+    padding-top:3%;
+    padding-right:3%;
+    padding-left:3%;
+
+}
+#specify_your_search_header, #search_results_header{
+
+    margin: 25px 0 1% 165px;
+}
+#specify_your_search_header, #search_results_header,#search_results{
+
+    font-family: Lato;
+    font-size: 24px;
+    color: #4FCD95;
+    font-weight:bold;
+}
+#search_results{
+
+    width: 100%;
+
+}
+
+
+#location, #hashtag, #distance, #price{
+    font-size: 16px;
+    color: #34495E;
+}
+#location {
+
+    float: left;
+    margin-bottom:22px;
+
+}
+#hashtag {
+    margin-bottom:0px;
+
+}
+.match{
+    float: right;
+    text-align:right;
+
+}
+.match h1{
+    font-family: Lato;
+    color: #4FCD95;
+    font-size: 80px;
+}
+.match h3{
+    font-family: Lato;
+    color: #2C3E50;
+    font-size: 27px;
+    font-weight:200;
+}
+.item{
+    width: 230px;
+    background-color: white;
+
+}
+.item_price{
+    font-family: Lato;
+    color: white;
+    font-size: 20px;
+    font-weight:400;
+    height: 48px;
+    background-color: #00BDEF;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 8px
+}
+.item_details{
+    height:auto;
+}
+.item_details .header{
+    font-size: 20px;
+    font-weight:400;
+    color: #4FCD95;
+    padding: 15px 15px 5px 15px;
+    margin: 0;
+}
+.item_details .body{
+    font-size: 12px;
+    font-weight:300;
+    padding: 0 15px 0 15px;
+    direction:ltr;
+    line-height: 1.5em;
+
+}
+
+.item_footer{
+    width:100%;
+    height:43px;
+    background-color: white;
+    border-top:1px solid #EAEBEB;
+
+
+}
+.item_footer .time{
+
+    vertical-align:middle;
+    display: inline-block;
+    width:33%;
+    font-size: 12px;
+    text-align: center;
+
+    border-right:1px solid #EAEBEB;
+    height:43px;
+
+
+}
+.item_footer .view{
+    vertical-align:middle;
+    display: inline-block;
+    width:32%;
+    font-size: 12px;
+    text-align: center;
+
+    border-right:1px solid #EAEBEB;
+    height:43px;
+
+
+}
+.item_footer .like{
+    vertical-align:middle;
+    display: inline-block;
+    width:31%;
+    font-size: 12px;
+    text-align: center;
+    height:43px;
+    border-radius: 0 0 3px 0;
+
+
+
+}
+.form-control {
+
+}
+.item_image{
+
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+.loading{
+    width:100%;
+    text-align: center;
+}
+.vertical-space-8px{
+    margin-top: 8px;
+}
+.vertical-space-20px{
+    margin-top: 20px;
+}
+.vertical-space-40px{
+    margin-top: 40px;
+}
+/* Css for Modal section*/
+#modal_item{
+    opacity:1;
+}
+#modal_item_dialog{
+    width:950px;
+    background:transparent;
+}
+#modal_item_content{
+    background:transparent;
+    border-width: 0;
+}
+#modal_item_header{
+    height:100px;
+    background: white;
+
+}
+#modal_item_header h3{
+    color: #4FCD95;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 20px 0 0 40px;
+    margin: 0;
+}
+#modal_item_header #modal_footer{
+    font-size: 12px;
+    margin: 0 0 0px 40px;
+}
+#modal_item_div{
+    height: 500px;
+    background: white;
+
+}
+#modal_item_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#profile, #down_to_profile{
+    height: 230px;
+    background: white;
+
+}
+#modal_item_details{
+    height:220px;
+    background: white;
+    padding: 25px 25px 25px 25px;
+    position:relative;
+
+}
+#modal_item_details #text{
+    font-size: 16px;
+    color: #6e7a87;
+}
+#modal_item_details #btn_interested{
+    position:absolute;
+    bottom:45px;
+    right: 25px;
+    color: #50CD95;
+    background-color: white;
+    border-color: #50CD95;
+    border-width: 5px;
+    width:185px;
+    font-size:20px;
+
+
+}
+#modal_item_details #footer{
+    font-size: 13px;
+    color: #bfc5c6;
+    position: absolute;
+    bottom: 10px;
+}
+#conversation{
+    background: white;
+    width:49.5%;
+    float: left;
+    height:380px;
+    border: 10px solid;
+    border-color:#4FCD95;
+    position:relative;
+
+}
+#conversation #camera {
+    color: #bdc3c7;
+    background-color: #ffffff;
+    padding: 5px 0 8px 10px;
+    font-size: 24px;
+}
+#conversation #control_group{
+    width:100%;
+    padding: 0 8px 0 8px;
+    position:absolute;
+    bottom:15px;
+}
+#conversation #control_group .input-group{
+    width:370px;
+    float:left;
+
+}
+#conversation #control_group #send{
+    width:60px;
+    float:left;
+}
+#right_to_conversation{
+    background: white;
+    width:49.5%;
+    float: right;
+    height:380px;
+}
+
+
+/****** AddMewItem CSS starts here *******/
+
+#AddNewItem .container{
+    width: 100%;
+    height: auto;
+    background-color: #4fcd95;
+    padding-bottom: 40px;
+}
+
+#AddNewItem{
+    width: 100%;
+    background-color: pink;
+    display:none;
+}
+
+#AddNewItem #left .checkbox.checked .second-icon, .radio.checked .second-icon {
+    color: #4fcd95;
+}
+
+#AddNewItem #whiteboard{
+    height: auto;
+    background-color: #ffffff;
+    margin-top: 45px;
+    Padding: 30px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+#AddNewItem #whiteboard p{
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: rgba(52, 73, 94, 0.78);
+}
+
+#AddNewItem #whiteboard .form-control{
+    border: 2px solid #ecf0f1;
+    color: rgba(52, 73, 94, 0.78);
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.467;
+    padding: 8px 12px;
+    height: 48px;
+    border-radius: 3px;
+
+}
+
+#AddNewItem #whiteboard .checkbox{
+
+    color: rgba(52, 73, 94, 0.78);
+
+}
+
+
+#AddNewItem #description .form-control{
+    width: 100%;
+    height: 165px;
+
+}
+#AddNewItem #left .form-control{
+    height: 50px;
+}
+
+#AddNewItem #left{
+    padding-bottom: 35px;
+}
+
+#AddNewItem #headline{
+    padding-bottom: inherit;
+}
+
+#AddNewItem #location{
+    padding-bottom: inherit;
+}
+
+#AddNewItem #price{
+    padding-bottom: inherit;
+    margin-top: 5px;
+}
+
+
+
+
+#AddNewItem #whiteboard .textarea:focus{
+
+    border-color:#bdc3c7;
+    doutline-color: transparent;
+    outline-style: none;
+}
+
+#AddNewItem #whiteboard .form-control:focus{
+    border-color:#bdc3c7;
+}
+
+
+#AddNewItem #middle{
+    padding-bottom: 40px;
+}
+
+#AddNewItem #description{
+    padding-bottom: inherit;
+}
+
+#AddNewItem #whiteboard .tagsinput{
+    border-radius:3px;
+
+}
+#AddNewItem #whiteboard .tagsinput-add{
+    line-height: 1.467;
+    width: 35px;
+    padding-left: 11px;
+}
+
+#AddNewItem #whiteboard .tagsinput-add:hover{
+    background-color: #4fcd95;
+}
+#AddNewItem #right{
+
+}
+
+#AddNewItem #right .social{
+    margin-top: 155px;
+
+}
+
+#AddNewItem #right .btn-primary .btn .btn-default .btn-wide{
+    align-items: center;
+
+}
+$("#file")
+.trigger('click');
+#AddNewItem #right .btn-primary{
+    color: #4fcd95;
+    background-color: #ffffff;
+    border: 2px solid #4fcd95;
+    width: 100%;
+    height: 50px;
+}
+
+#AddNewItem #right .btn-primary:hover, .btn-primary.hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{
+    color: #ffffff;
+    background-color: #4fcd95;
+    border-color: #4fcd95;
+}
+
+#AddNewItem #right .picture{
+    padding-bottom: inherit;
+}
+/*
+#right .btn-social-facebook {
+    color: #2f4b93;
+    border: 2px solid #2f4b93;
+    background-color: #ffffff;
+    height: 48px;
+    width: 100%;
+    padding-top: 15px;
+}*/
+
+#AddNewItem #right .social .btn-primary .btn .btn-default .btn-wide{
+    align-items: center;
+
+}
+
+#AddNewItem #right .social .btn-primary{
+    color: #5871b1;
+    background-color: #ffffff;
+    border: 2px solid #5871b1;
+    width: 100%;
+    height: 50px;
+    padding-top: 13px;
+}
+
+#AddNewItem #right .social .btn-primary:hover, .btn-primary.hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{
+    color: #ffffff;
+    background-color: #2f4b93;
+    border-color: #2f4b93;
+}
+
+#AddNewItem #submit .btn-primary{
+    margin-top: 60px;
+    margin-bottom: 0px;
+}
+
+/****** AddMewItem CSS ends here *******/
+/****** CHAT CSS *******/
+
+#conversation #chat_container{
+
+    overflow:scroll;
+    height:290px;
+    background: white;
+    z-index: -500;
+
+}
+#conversation #chat_container .bubbledLeft,#conversation #chat_container .bubbledRight{
+    margin: 3px 5px 10px 5px;
+    padding: 3px 5px 3px 5px;
+    max-width: 80%;
+    clear: both;
+
+}
+
+#conversation #chat_container .bubbledLeft{
+    z-index: 2;
+    position: relative;
+    float: left;
+    margin-right: auto;
+    text-align:left;
+    padding: 9px 15px 9px 20px; /*position within the border*/
+    font-family: Lato;
+    font-weight:200;
+}
+#conversation #chat_container .bubbledLeft:before{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    content: "";
+
+    border-width: 8px 10px 8px 17px;
+    border-image: url(../img/speech_bubble_left.png) 8 10 8 17 stretch stretch;
+    -webkit-border-image: url(../img/speech_bubble_left.png) 8 10 8 17 stretch stretch;
+    -moz-border-image: url(../img/speech_bubble_left.png) 8 10 8 17 stretch stretch;
+    -o-border-image: url(../img/speech_bubble_left.png) 8 10 8 17 stretch stretch;
+}
+#conversation #chat_container .bubbledRight{
+    z-index: 2;
+    position: relative;
+    float: right;
+    margin-left: auto;
+    text-align:left;
+    padding: 9px 20px 9px 15px; /*position within the border*/
+    color: white;
+    font-family: Lato;
+    font-weight:200;
+}
+#conversation #chat_container .bubbledRight:before{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    content: "";
+
+    border-width: 8px 17px 8px 10px;
+    border-image: url(../img/speech_bubble_right.png) 8 17 8 10 stretch stretch ;
+    -o-border-image: url(../img/speech_bubble_right.png) 8 17 8 10 stretch stretch ;
+    -moz-border-image: url(../img/speech_bubble_right.png) 8 17 8 10 stretch stretch ;
+    -webkit-border-image: url(../img/speech_bubble_right.png) 8 17 8 10 stretch stretch ;
+}
+
+/**** CHAT CSS ENDS HERE******/
+/*Media Query*/
+@media (max-width: 980px) {
+
+    #specify_your_search_content, #specify_your_search_header, #search_results_header{
+
+        margin: 10px 20px 10px 20px;
+
+
+    }
+    #search_box,#right_bar{
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    #right_bar{
+
+        margin-left: 33%;
+
+
+    }
+
+}
+@media (max-width: 768px) {
+
+    #right_bar #unread{
+
+        margin-left: -50px;
+
+
+    }
+
+}
+@media (max-width: 360px) {
+    #right_bar, #add_new_iteml{
+
+
+
+
+    }
+    #right_bar{
+
+        margin-left: 25%;
+
+
+
+    }
+    #bell{
+
+
+
+
+
+
+    }
+    #right_bar #unread{
+
+
+
+
+    }
+    #right_bar #notification {
+
+    }
+
+}

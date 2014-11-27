@@ -1,0 +1,154 @@
+body {
+    font: 20px "Lato";
+    font-weight: bold;
+
+    /* sameer */
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%
+}
+
+
+.navbar {
+    padding: 0px;
+    padding-top: 5px;
+    margin: 0px;
+    border-radius: 0px;
+
+}
+
+.navbar-brand img{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+
+.navbar-toggle:before{
+    content:"";
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border: none;
+}
+
+.navbar-collapse.in{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+#resetPasswordForm
+{
+    display:none;
+}
+.bottom-menu a.fui-facebook, .bottom-menu a.fui-twitter{
+    font-size: 80px;
+    color:#2D3F51;
+    padding: 5px;
+}
+.bottom-menu h1, .bottom-menu p{
+    color:#2D3F51;
+}
+* {
+    font-family: Lato;
+    font-weight: 200;
+}
+.top-bar {
+    background-color: white;
+    height: 60px;
+    width: auto;
+    background-attachment: fixed;
+    background-position: top;
+}
+.tb.logo {
+    height: 50px;
+    margin: 0px;
+    display: block;
+    background: url('../../img/checktomlogo.png') no-repeat;
+    background-position: center 15px;
+}
+.divider {
+    width: 420px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: -10px;
+}
+.left {
+    float: left;
+    margin-right: auto;
+    background: black;
+    border: 0;
+    height: 1px;
+    width: 120px;
+}
+.right {
+    float: right;
+    margin-left: none;
+    background: black;
+    border: 0;
+    height: 1px;
+    width: 120px;
+}
+.login {
+    margin: 20px;
+}
+body {
+    background-color: #ECF0F1;
+}
+.vertical-space-10px {
+    margin-top: 10px;
+}
+.vertical-space-20px {
+    margin-top: 20px;
+}
+.vertical-space-40px {
+    margin-top: 40px;
+}
+.btn-primary {
+    background: #2F4B94;
+    font-size: 16px;
+}
+.form-control {
+    font-size: 14px;
+}
+.btn-custom {
+    color: #50CD95;
+    background-color: #ECF0F1;
+    border-color: #50CD95;
+    border-width: 2px;
+    width: 200px;
+    font-size: 16px;
+}
+p.login-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+p.login-lbl-info {
+    color: #16C0EF;
+}
+p.your-email {
+    font-size: 18px;
+}
+p.forgot {
+    font-size: 14px;
+}
+a.recover {
+    color: #50CD95;
+}
+
+/* Extra small devices (phones, portrait mode less than 419px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width:480px) {
+
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: 767px){
+
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px){
+
+}

@@ -1,0 +1,555 @@
+/**
+** General
+**/
+/*html {font-size:10px;}*/
+body {
+    font: "Lato";
+    /* sameer */
+    position: relative;
+    overflow-x: hidden;
+}
+
+body h1 {
+    font-size: 10px
+}
+
+body h5 {
+    font-size: 10px
+}
+
+body p {
+    font-size: 10px
+}
+
+img {
+    max-width: 100%
+}
+
+.container .jumbotron{
+    border-radius: 0px;
+}
+#ContainerRetainer {
+    width: 100%;
+}
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-right: -0px;
+    margin-left: 0px;
+}
+
+.row, .section, .navbar, .navbar-default, .container, .navbar-header, a, .navbar-brand, .jumbotron, .slide, .btn, .btn-social-facebook, h1 {
+    padding: 0px;
+    margin: 0px;
+    background-color: inherit;
+    background-image: none;
+    color: #FFFFFF;
+}
+
+/* top div */
+#descContainer {
+    background-image: url("../../img/studentBackground.png");
+    background-size: 100%;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 5.2rem; /*52px39pt;*/
+}
+
+#descContainer h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    color: #FFFFFF;
+    line-height: 5rem; /* 60px to 6.8em? */
+}
+
+#TopJump {
+    padding-bottom: 9rem; /* 90px 67.5pt;*/
+}
+
+#BotJumpH1 {
+    padding-bottom: 5rem; /*40px 30pt;*/
+}
+#BotJumpH1 h1{
+    text-align: center;
+    font-size: 6rem;
+    text-shadow: 0px 2px 4px #555;
+}
+#BotJumpP{
+    padding-top: 3rem;
+}
+#BotJumpP p {
+    font-size: 1.7rem; /*19px;*/
+    font-weight: 600;
+    color: #213c54;
+    line-height: 2.2rem; /*32px 20pt;*/
+}
+
+/* second div*/
+#signupcontainer {
+    background-color: #2d3f51;
+    text-align: center;
+}
+
+#FirstSlide {
+    color: #FFFFFF;
+}
+
+#FirstSlide h1 {
+    padding-top: 6.5rem; /*65px48.75pt;*/
+    font-size: 5.2rem; /*52px;*/
+}
+
+#signupSubmit {
+    background-color: #14ddb3;
+    color: #FFFFFF;
+    font-size: 2.8rem; /*28px;*/
+    width: 45rem; /* 450px 337.5pt; */
+    height: 7.5rem; /* 75px 56.25pt;*/
+}
+#signupSubmit:hover, #shareOnFB:hover{
+    color: lightgray;
+}
+#reg_email {
+    background-color: #2d3f51;
+    border: 1px solid white;
+    font-size: 2.5rem; /* 25px; */
+    width: 45rem; /*450px 337.5pt;*/
+    height: inherit; /*75px 56.25pt;*/
+    color: #FFFFFF;
+}
+
+*::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #FFFFFF;
+    font-size: 2.5rem; /*25px;*/
+    font-weight: 200;
+}
+
+*:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+*::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+*:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+#SlideParagraph1 {
+    padding-top: 2.8rem; /*28px21pt;*/
+}
+
+#SlideParagraph1 p {
+    font-size: 2rem; /*20px15pt;*/
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+#SlideParagraph2 {
+    padding-bottom: 11.8rem; /*118px 88.5pt; */
+}
+
+#SlideParagraph2 p {
+    font-size: 2rem;
+    padding: 0px;
+    margin: 0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+
+}
+/* bottom div*/
+#ThirdContainer {
+    background-color: #FFFFFF;
+}
+
+#BotHeader h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 5.2rem;
+    font-weight: bold;
+}
+#BotFlavor p {
+    color: #2c3e50;
+}
+#FacebookLogo, #InstagramLogo {
+    color: #34495e;
+}
+#TwitterLogo {
+    color: #34495e;
+}
+#LogoList {
+    padding-bottom: 9.5rem; /*95px;71.25pt;*/
+}
+#LogoContainer {
+    padding-top: 2.5rem; /*70px52.5pt;*/
+    text-align: center;
+}
+
+#BottomMenu1 a, #BottomMenu1 a:active, #BottomMenu1 p, #BottomMenu1 h5, #BottomMenu1 li {
+    color: #c0c5ca;
+}
+#BottomMenu1 h5 {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+}
+#BottomMenu1 p, #BottomMenu1 a {
+    font-size: 1.4rem;
+    text-align: justify;
+}
+#BottomMenu1 {
+    background-color: #ecf0f1;
+}
+
+p.error-block{
+    padding-top:5px
+}
+
+#BotFlavor p {
+    text-align: center;
+    font-size: 2rem;
+}
+/* slide div*/
+#Slide2Header h1 {
+    padding-top: 3rem; /*30px22.5pt;*/
+    font-size: 5.2rem;
+    font-weight: bold;
+    padding-bottom: 1.9rem; /*14.25pt;19px*/
+
+}
+
+#Slide2Paragraph1 p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#Slide2Paragraph2 p, #Slide2Paragraph2LowRes p {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#Slide2Paragraph2LowRes {
+    display: none;
+}
+
+#Slide2FacebookShare {
+    padding-bottom: 3rem; /*22.50pt;30px*/
+}
+
+#Slide2FacebookShare p {
+    font-size: 2.5rem; /*25px;*/
+    font-weight: bold;
+}
+
+#Slide2FacebookShare .btn-social-facebook {
+    height: 7rem; /*52.5pt;70px*/
+    width: 33rem; /*247.5pt;330px*/
+    background-color: #3473db;
+}
+
+#Slide2FacebookShareText {
+    padding-top: 2rem; /*15pt;20px*/
+}
+
+#bottom-links {
+    padding-top: 0px;
+}
+#envelope{
+    color:#34495e;
+}
+
+#LandScapeContainer {
+    display: none;
+    text-align: center;
+}
+#IconContainer img{
+    padding-bottom:2rem;
+}
+#IconContainer h1{
+    font-size: 2.8rem;
+    color:#34495e;
+    font-weight: bold;
+
+}
+#IconContainer p{
+    font-size:2rem;
+    color:#34495e;
+}
+#IconContainer{
+    text-align: center;
+}
+#BotHeaderContainer2 {
+    padding-top: 10rem; /*65px48.75pt;*/
+}
+#LogoContainer2{
+    padding-top:10rem;
+}
+#BotHeader2 h1 {
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+    color:#34495e;
+}
+#H1Container
+{
+    height:5.6rem;
+
+}
+#PContainer
+{
+    padding-top: 2rem;
+}
+#fullPage-nav.right{
+    right: -1rem;
+}
+.bottom-menu{
+    color:#C0C5CD;
+}
+#BotHeader {
+    padding-top: 2rem;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Both for mobile portrait and landscape*/
+/** xs-min to xs-max**/
+@media (min-width: 0px) and (max-width: 767px) {
+    html {
+        font-size: 8px;
+    }
+
+    #BottomMenu1 h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+
+    }
+    #BottomMenu1 p, #BottomMenu1 a, #BottomMenu1 li {
+        font-size: 1.3rem;
+    }
+    #BotMenuFollow{
+        display:none;
+    }
+    #TopJump, #BotJumpH1 {
+        padding-bottom: 5rem; /* 90px 67.5pt;*/
+    }
+    #BotJumpH1 h1{
+        font-size: 25px;
+    }
+    #BotJumpP p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    #FirstSlide h1 {
+        padding-top: 2.5rem; /*65px48.75pt;*/
+        font-size: 3.5rem; /*52px;*/
+    }
+    #SlideParagraph2 p {
+        font-size: 1.5rem;
+        padding-top:10px;
+        padding-bottom: 20px;
+    }
+    #LogoList {
+        padding-bottom: 1rem;
+    }
+
+    #descContainer {
+        padding-top: 4rem;
+    }
+
+    #descContainer h1 {
+        padding-top:2rem;
+        font-size: 4.6rem;
+        line-height: normal;
+    }
+
+    #descContainer p {
+        padding-top:2.2rem;
+    }
+
+    #SlideParagraph1 {
+        padding-top: 1rem;
+    }
+
+    #SlideParagraph2 {
+        padding-bottom: 1rem;
+    }
+
+    .fa-4x {
+        font-size: 4rem;
+    }
+
+    #BotHeaderContainer {
+        padding-top: 1rem;
+    }
+
+    #BotFlavor p {
+        padding-bottom: 0px;
+    }
+
+    #LogoContainer {
+        padding-top: 1rem; /*95px;71.25pt;*/
+    }
+
+    #BottomViewGroup {
+        padding-top:5px;
+        /*display:none;*/
+    }
+
+    #LandScapeContainer {
+        /*display: block;
+        padding-left:3em;*/
+    }
+    #LandscapeBotColumn {
+        float: left;
+    }
+
+    #LandscapeBotColumnContact {
+        float: left;
+        padding-left: 3em;
+    }
+
+    #ThirdContainer img {
+        transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        -webkit-transform: scale(0.5, 0.5);
+    }
+
+    #Slide2Header h1 {
+        padding-top: 2.5rem; /*65px48.75pt;*/
+        font-size: 3.5rem; /*52px;*/
+        padding-bottom: 1rem;
+    }
+
+    #SecondSlide img {
+        display: none;
+    }
+
+    #Slide2Paragraph2LowRes {
+        display: block;
+    }
+    #Slide2Paragraph2LowRes p {
+        font-size: 1.8rem;
+    }
+    #Slide2Paragraph2 {
+        display: none;
+    }
+
+    #signupSubmit {
+        width: 25rem; /* 450px 337.5pt; */
+    }
+
+    #reg_email {
+        width: 25rem; /*450px 337.5pt;*/
+    }
+
+    #bottom-links {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .bottom-menu .navbar-brand, .bottom-menu .bottom-links {
+        margin-bottom: 0px;
+    }
+    #BotHeader h1 {
+        font-size: 4rem;
+    }
+
+    #IconContainer img{
+        padding-bottom:0rem;
+    }
+    #PContainer
+    {
+        padding-top:0px;
+    }
+    #BotHeader2 h1
+    {
+        font-size:3rem;
+    }
+    #PContainer p
+    {
+        font-size:1.5rem;
+    }
+    #IconContainer h1
+    {
+        font-size:2rem;
+    }
+    #BotHeaderContainer2 {
+        padding-top: 1rem; /*65px48.75pt;*/
+    }
+    #LogoContainer2
+    {
+        padding-top:1rem;
+    }
+    .bottom-menu-large{
+        padding-top: 17px;
+    }
+
+}
+/** For mobile landscape **/
+@media (min-width: 0px) and (max-width: 767px) and (orientation : landscape){
+    #BotHeaderContainer2 {
+        padding-top: 0px; /*65px48.75pt;*/
+    }
+}
+
+    /** sm-min to sm-max*/
+@media (min-width: 768px) and (max-width: 991px) {
+    html {
+        font-size: 10px;
+    }
+    .container {
+        width: auto;
+    }
+    .navbar > .container .navbar-brand {
+        margin: 0px;
+    }
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin: 0px;
+    }
+}
+/** md-min to md-max*/
+@media (min-width: 992px) and (max-width: 1999px) {
+    .container {
+        width: auto;
+    }
+}
+
+/** lg-min & over*/
+@media (min-width: 1200px){
+    .container {
+        width: auto;
+    }
+
+    #ContainerRetainer {
+        width: 100%;
+    }
+}
+/** fixing with fullpage js*/
+.row {
+    margin: 0px;
+}
+
+.col-md-12, .col-lg-12, .col-sm-12 {
+    padding: 0px;
+}
+body h1{
+    font-size:40px;
+    color:black;
+}

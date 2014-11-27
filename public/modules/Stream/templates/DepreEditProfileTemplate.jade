@@ -1,0 +1,21 @@
+#profileSettings
+    .container
+        .row
+            .col-md-3
+                .user
+                    #userImg
+                        img.userPicture(src='')
+                    #userName
+                        p username
+            .col-md-9
+            .col-md-3
+            .col-md-9
+                .settings
+                    .col-md-12
+                        .col-md-3
+                            form#ProfileForm(method='post', enctype='multipart/form-data')
+                                p Upload a new profile image.
+                                input#image(type='file', name='image0', accept='image/*').btn.btn-wide.btn-primary.mrm
+                                br
+                                button#saveChanges.btn.btn-embossed.btn-primary Save Changes
+                        .col-md-9

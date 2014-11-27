@@ -1,0 +1,28 @@
+#EditUserBlurLayer
+    img(src='/assets/img/greybackgroundimage.png',id="blurLayer")
+#EditUserModulePopup.container.col-md-10.col-md-offset-1.col-lg-10.col-lg-offset-1
+    #EditUserHeader.col-md-10.col-lg-10
+        h1 Edit User Tool
+        button.btn.btn-info#CloseModule(type='submit') Close Module
+    #EditUserList.col-md-10.col-lg-10
+        #EditUserRecord
+            // user record is empty, will be procedually generated on page load.
+    #EditUserForm.col-md-10.col-lg-10
+        input(id="EditEmail",value='',readonly="true")
+        p Email ^
+        br
+        input(id="EditCreatedAt",value='')
+        p Created At ^
+        br
+        input(id="EditNrOfFriends",value='')
+        p Number of facebook friends ^
+        br
+        input(id="EditSharedCompetitionCriteria",value='')
+        p Did user share competition on facebook? ^
+        br
+        button.btn.btn-info#SubmitEdit(type='submit',disabled="true") Submit
+          //Email: String, unique
+            created_at: Date
+            updated_at: Date
+            number_of_friends: Number
+            shared: yes/no/Boolean */

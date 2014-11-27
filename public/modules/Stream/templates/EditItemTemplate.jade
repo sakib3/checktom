@@ -1,0 +1,86 @@
+#editItemView
+    .container
+        #titlerow.row
+            .col-md-12
+                .top-div.whiteboard
+                    #eiv_changeTitle
+                        input#eiv_titleInput.form-control.fixInline(type='text', style='display:none;')
+                        h1#eiv_title.fixInline Retro bike
+                        #eiv_toggleChangeTitle.fixInline(style='height: 50px;')
+                            span.fui-new
+                    table
+                        tbody
+                            tr
+                                td(style='padding-right: 30px;')
+                                    span.fui-time
+                                    p#eiv_added(style='display:inline;') 2 days
+                                td(style='padding-right: 30px;')
+                                    span.fui-eye
+                                    p#eiv_seen(style='display:inline') 86
+                                td
+                                    span.glyphicon.glyphicon-map-marker
+                                    p#eiv_liked(style='display:inline;') 122
+                    #eiv_close
+                        span.fui-cross
+        .row.middleFixTop
+            #editItemViewFlexBox
+                .col-md-4.col-md-push-8
+                    #eiv_flexBoxHelper
+                    #eiv_userPicture.col-md-12.divFixBottom.divFixTop.removePadding
+                        .userPicture.whiteboard
+                            .pictureWrapper
+                                #authorImage
+                            .userName#authorName
+                    #eiv_shareBox.col-md-12.divFixBottom.removePadding
+                        .emptyBox2.whiteboard
+                            | SHARE BOX?
+                .col-md-8.col-md-pull-4.middleFixRight
+                    #eiv_itemPicture.col-md-12.divFixBottom.removePadding
+                        .itemPicture.whiteboard
+                            #itemPictureImage
+                            div
+                                span.btn.btn-primary.btn-file.btn-upload-image
+                                    span.fileinput-new Update Picture
+                                    form#UpNewImg(method='post', enctype='multipart/form-data')
+                                    input#UploadImgField(form='UpNewImg',type='file', name='image0', accept='image/*')
+                    #eiv_itemDescription.col-md-12.divFixBottom.removePadding
+                        .whiteboard
+                            .itemDescription
+                                    #eiv_changeDesc
+                                        textarea#eiv_descInput.form-control.fixInline(type='text',rows='2', style='display:none;')
+                                        p#eiv_desc.fixInline
+                                            | Totally restored fixi-bike with premium parts, no gear, 28" aluminium city tires, Brooks vintage saddle, Retro paddles, all aluminium parts
+                                        #eiv_toggleChangeDesc.fixInline(style='height: 50px;')
+                                            span.fui-new
+                                .row
+                                    #eiv_price.pull-right
+                                        input#eiv_priceInput.form-control.fixInline(type='text', style='display:none;')
+                                        #eiv_priceDisp.fixInline
+                                            | 123516561
+                                        #eiv_toggleChangePrice.fixInline(style='height: 50px;')
+                                            &nbsp
+                                            span.fui-new
+                                #eiv_hashtags.fixInline
+                                    | HERE, GOES, A, LOT, OF, HASHTAGS
+                                #hashtagsInputWrapper
+                                    .tagsinput
+                                        .tagsinput-add-container
+                                            .tagsinput-add
+                                            input(value='', data-default='', style='color: rgb(102, 102, 102); width: 100px;')
+                                #eiv_toggleChangeHashtags.fixInline
+                                    span.fui-new
+                    #eiv_chatBox.col-md-6.divFixBottom.removePadding
+                        #conversation
+                            #chat_container
+                                #bg
+                            #control_group
+                                .input-group
+                                    span.input-group-btn
+                                        span.glyphicon.glyphicon-camera
+                                    input#msg.form-control(type='text', placeholder='Type your message here...')
+                                    //input#file(type='file')
+                                    button#send.btn.btn-embossed.btn-primary(type='button')
+                                        | Send
+                    #eiv_emptyBox.col-md-6.removePadding
+                            #right_to_conversation
+                                #chatList

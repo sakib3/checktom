@@ -1,0 +1,11 @@
+
+
+Page loads: And all articles are fetched from the database and displayed in the stream. We can modify this "first" pull from the DB
+
+Searching for articles:
+1 the search input field takes a keyword
+2 if distance has not been touched, there will be no filtering of results by distance.
+3 results will be built on the homepage by emptying the dom list, and building articles one by one.
+
+The unspoken stuff
+1 There is no way to disable distance filter once you've "clicked" it.

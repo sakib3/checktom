@@ -1,0 +1,78 @@
+#navigation
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container
+            .row
+                // LOGO COLUMN
+                .col-md-12
+                    .nav-center-horizontally.nav-fixheight
+                        .nav-center-vertically.nav-center-vertically-logofix
+                            a(href='https://checktomtest.nodejitsu.com',onclick='window.location.href = "https://checktomtest.nodejitsu.com";')
+                                img.nav-logo(src='./assets/img/checktomlogo.png')
+#signup
+    .signup-container
+        .signup-content
+            h1
+                | Create your free Checktom account
+            br
+            br
+            br
+            button#fbButton.btn.btn-social-facebook.mrs
+                // <i class="fui-facebook"></i>
+                | Sign up with Facebook
+            .signup-fb-promise
+                span.fui-info
+                .signup-fb-promise-text
+                    | We will never post anything to Facebook or share your info with anybody
+            .signup-split-email
+                table
+                    tbody
+                        tr
+                            td
+                                hr
+                            td.middle
+                                | or with your email
+                            td
+                                hr
+            .signup-email-form
+                form#registerForm
+                    input#signup-name.form-control(type='text', placeholder='Full Name')
+                    br
+                    input#signup-email.form-control(type='text', placeholder='Email')
+                    br
+                    .signup-email-check
+                        span.fui-check
+                    input#signup-password.form-control(type='password', placeholder='Password')
+                    .signup-password-infobox-wrapper
+                        .signup-password-infobox
+                            p
+                                | Choose a password at least eight characters long, with at least one Uppercase letters
+                            .arrow
+                    .signup-username-check
+                        span.fui-check
+                    .student-check
+                        .col-md-6.col-xs-6
+                            label.checkbox.pull-left(for='checkbox1')
+                                input#checkBoxIsStudent(type='checkbox', value='', data-toggle='checkbox')
+                                | I'm a student
+                        .col-md-6.col-xs-6
+                            label.checkbox.pull-left(for='checkbox1')
+                                input#checkBoxIsNotStudent(type='checkbox', value='', data-toggle='checkbox')
+                                | I'm not a student
+                    br
+                    .cityAndSchoolPosition
+                        .col-md-6
+                            #cityListWrapper
+                                select#cityList.form-control(required='required', type='search')
+                                span#cityListArrow.caret
+                        .col-md-6
+                            #schoolListWrapper
+                                select#schoolList.form-control(required='required', type='search')
+                                span#schoolListArrow.caret
+                            input#signupTitleOrPosition.form-control.schoolposition(type='text', placeholder='Your title or position')
+                    br
+                    button.btn.btn-signup
+                        | SIGN UP
+                    br
+                    p
+                        | By creating your Checktom account you agree to our
+                        a(href='#', target='_self') Terms of Use and Privacy Policy

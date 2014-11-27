@@ -1,0 +1,130 @@
+#navigation
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container
+            .row
+                // SEARCH BAR COLUMN
+                .col-xs-4.col-xs-push-4.col-sm-4.col-sm-push-4.col-md-4.col-md-push-4
+                    .nav-center-horizontally.nav-fixheight
+                        .nav-center-vertically.nav-center-vertically-logofix
+                            a(href="https://checktomtest.nodejitsu.com")
+                                img.nav-logo(src='./assets/img/checktomlogo.png')
+                // LOGO COLUMN
+                .col-xs-12.col-sm-12.col-sm-pull-4.col-md-4.col-md-pull-4.nav-fix-left-padding
+                    .nav-fixheight.nav-fix-left-padding
+                        .nav-center-vertically.nav-center-vertically-searchfix
+                            .navbar-form.navbar-left.nav-no-padding
+                                .form-group
+                                    .input-group
+                                        input#search.form-control(type='text', placeholder='What are you looking for?')
+                // RIGHTER COLUMN
+                .col-xs-4.col-sm-4.col-md-4.nav-right-part.pull-right
+                    // NEW CONTAINER TO SPLIT THE THREE ELEMENTS
+                    .pull-right.nav-center-vertically-rightfix
+                        button#addNewItem.btn.btn-embossed.btn-success
+                            | Add New Item
+                        .nav-right-filler
+                        #nav-notification-menu.btn-group.select.mbn
+                            button#nav-profile.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+                                .glyphicon.glyphicon-bell.nav-notification
+                            ul#NotificationUL.dropdown-menu.dropdown-menu-right.nav-dropdown-menu-whitebackground(role='menu')
+                        .nav-right-filler
+                        #nav-profile-menu.btn-group.select.mbn
+                            button#nav-profile.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+                                .glyphicon.glyphicon-user
+                            // <span class="dropdown-arrow"></span>
+                            ul#dropdown-menu-profile.dropdown-menu.dropdown-menu-right.nav-dropdown-menu-whitebackground(role='menu')
+                                li(rel='0')
+                                    a#MyItemsButton.opt(tabindex='-1', href='#stream')
+                                        span.pull-left
+                                            | My items
+                                li(rel='1')
+                                    a.opt(tabindex='-1', href='#stream')
+                                        span.pull-left
+                                            | Watch list
+                                li(rel='2')
+                                    a.opt(tabindex='-1', href='#stream')
+                                        span.pull-left
+                                            | My search
+                                li(rel='3')
+                                    a.opt(tabindex='-1', href='#stream')
+                                        span.pull-left
+                                            | My groups
+                                li(rel='4')
+                                    a#EditProfileButton.opt(tabindex='-1')
+                                        span.pull-left
+                                            | Profile settings
+                                li.nav-dropdown-menu-item-logout(rel='5')
+                                    a.opt(tabindex='-1', href='/logout')
+                                        span.pull-left.nav-profile-menu-span-logout
+                                            | Log out
+                                        span.pull-right.fui-power.nav-profile-menu-span-logout-glyph
+// ADD NEW ITEM BOX
+//#loadingDiv
+    img(src='./assets/img/ajax-loader.gif')
+#fadeBackground
+#AddNewItemRegion
+//#fadeBackground
+// ITEM DETAIL VIEW
+// WHITEBOARD
+#searchSpec.container
+        .row
+            .col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+                #whiteboard
+                    .col-md-3
+                        #left
+                            #location
+                                .itemTitleWrapper
+                                    span.glyphicon.glyphicon-map-marker
+                                    p Location
+                                input#searchSpecLocation.form-control(type='text', placeholder='Select Your Location')
+                            #distance
+                                .itemTitleWrapper
+                                    span.glyphicon.glyphicon-arrow-right
+                                    p Distance
+                                #distanceSlider
+                                    .distanceNr 1
+                                    .ui-slider-segment(style='margin-left: 20%;')
+                                        .distanceNr.distance1 5
+                                    .ui-slider-segment(style='margin-left: 20%;')
+                                        .distanceNr.distance5 10
+                                    .ui-slider-segment(style='margin-left: 20%;')
+                                        .distanceNr.distance10 15
+                                    .ui-slider-segment(style='margin-left: 20%;')
+                                        .distanceNr.distance15 20
+                                    .distanceNr.distanceUnlimited ∞
+                    .col-md-6
+                        #middle
+                            #searchHashtag
+                                .itemTitleWrapper
+                                    span.fui-tag
+                                    p Hashtag
+                                .tagsinput#SearchTags
+                                    .tagsinput-add-container
+                                        .tagsinput-add
+                                        input(value='', data-default='', style='color: rgb(102, 102, 102); width: 7px;')
+                            #searchPrice
+                                .itemTitleWrapper
+                                    span.glyphicon.glyphicon-usd
+                                    p Price
+                                #priceSlider
+                                    .priceNr0 0
+                                    .priceNrUnlimited ∞
+                                    .sliderHandleWrapper
+                                        a.ui-slider-handle.ui-state-default.ui-corner-all.mysliderhandle
+                                            .tooltip.fade.bottom.in.tooltip-light.priceToolTip
+                                                .tooltip-arrow
+                                                .tooltip-inner ∞
+                    .col-md-3
+                        #right
+                            #matches
+                                p Matches
+                                p#results.results 69
+#switch
+    .row
+        .col-xs-2.col-xs-offset-5.col-sm-2.col-sm-offset-5.col-md-2.col-md-offset-5.col-lg-2.col-lg-offset-5
+          .col-sm-4.col-md-4.col-lg-4.center-block
+              input(data-on-text="Stream",data-off-text="Search",id="SwitchStream",type='checkbox', name='my-checkbox', checked='')
+// Item
+#main(role='main')
+    #itemList
+audio#notification_play(src='/assets/audio/notify.wav', preload='auto', style='display: none;')

@@ -1,0 +1,9 @@
+when creating an article, for search to work
+
+
+in the final DB insert syntax is important:
+
+1 Hashtags cant be saved as hashTags:[]
+it must be either  hashTags : [null] || hashTags :['#tag1','tag2','etc3']
+
+2 try to save numbers as doubles for good measure. add a .0 on integers to avoid complications in the future.

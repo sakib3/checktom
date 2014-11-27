@@ -1,0 +1,60 @@
+#addNewItemBox
+    .container.whiteboard
+        .row
+            .col-md-12.cancelAddNewItemWrapper
+                .cancel
+                    #cancelAddNewItem
+                        span.fui-cross
+            .col-md-3
+                .headlineDiv
+                    span.fui-arrow-right
+                    | Headline
+                    br
+                    .form-group
+                        input#addNewItemHeadline.form-control.input-lg.headline(type='text', value='', placeholder='Enter a Headline')
+                .locationDiv
+                    span.fui-location
+                    | Location
+                    br
+                    input#AddItemLocationTextField.form-control(type='text', placeholder='Select Your Location')
+            .col-md-6
+                span.glyphicon.glyphicon-align-left
+                | Description
+                br
+                textarea.form-control.addNewItemDescription(form='UploadForm',rows='3', placeholder='Give a brief description about this item',name='description',id="DescrHandle")
+                br
+            .col-md-3
+                span.fui-image
+                | Pictures
+                br
+                div
+                    span.btn.btn-primary.btn-file.btn-upload-image#ImgValidateHandle
+                        form#UploadForm(method='post', enctype='multipart/form-data',)
+                        span.fileinput-new Upload
+                        input(form='UploadForm',type='file', name='image0', accept='image/*',id='AddImg')
+                    img(id="AddImgThumb",src="./assets/img/SelectImgPlz.png").center-block
+        .row
+            .col-md-3
+                span.glyphicon.glyphicon-usd
+                | Price
+                .form-group
+                    input#addNewItemPrice.form-control.input-lg.price(type='text', value='', placeholder='1800')
+                label.checkbox(for='addNewItemPriceIsNegotiable')
+                    span.icons
+                        span.first-icon.fui-checkbox-unchecked
+                        span.second-icon.fui-checkbox-checked
+                    input#addNewItemPriceIsNegotiable(type='checkbox', value='', data-toggle='checkbox')
+                    | The price is negotiable
+                label.checkbox(for='addNewItemGiveAwayForFree')
+                    span.icons
+                        span.first-icon.fui-checkbox-unchecked
+                        span.second-icon.fui-checkbox-checked
+                    input#addNewItemGiveAwayForFree(type='checkbox', value='', data-toggle='checkbox')
+                    | Give away for free
+            .col-md-6
+              #hashtag
+                span.fui-tag
+                | Hashtag
+                input.tagsinput(id='AddNewItemTags',value='',style='color: rgb(102, 102, 102); width: 100px;')
+            .col-md-3
+                input(form='UploadForm',type='submit',value='Submit').btn.btn-submit

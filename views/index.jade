@@ -1,0 +1,11 @@
+extends layout
+
+block scripts
+    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?sensor=false&v=3&key=AIzaSyCAZUkdImuWP6QMjERNY_0vZpScekaztvY')
+    script(data-main='/require.config', type='text/javascript',src='/assets/libs/require/require.min.js')
+    //script(data-main='/js/main-build', type='text/javascript',src='/js/libs/require/require.min.js')
+
+
+block content
+    #content
+    #popup

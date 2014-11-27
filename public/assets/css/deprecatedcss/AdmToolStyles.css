@@ -1,0 +1,260 @@
+
+#AdmToolContainer{
+    height:100%;
+}
+#AdmToolHeaderContainer{
+    background-color: #FFFFFF;
+    -moz-box-shadow: 0px 0px 3px #000000;
+    -webkit-box-shadow: 0px 0px 3px #000000;
+    box-shadow: 0px 0px 3px #000000;
+}
+#AdmToolHeader{
+    display:inline-flex;
+    height:70px;
+    background-color: inherit;
+    padding:0px;
+
+
+}
+#AdmToolHeader img{
+    margin-top:25px;
+}
+#RightSideHeader{
+    margin-left:160px;
+    min-width:230px;
+}
+#AddNewItemBtn{
+    background-color: #4fcd95;
+    height:35px;
+    width:150px;
+    padding-left:0px;
+    margin-top:18px;
+}
+#AdmToolChecktomLogo{
+    margin-left:170px;
+    min-height:21px;
+    max-height:21px;
+    min-width:160px;
+}
+#SearchFieldContainer
+{
+    font-size:14px;
+    height:43px;
+    width:230px;
+    min-width: 230px;
+    color:#ffffff;
+    margin-top:12px;
+    background-color: inherit;
+}
+#NotificationsIcon{
+    padding-bottom: 6px;
+    margin-left: 30px;
+    width:30px;
+    height:36px;
+}
+#SettingsIcon{
+    margin-left:10px;
+    width:35px;
+    height:30px;
+}
+#SearchField
+{
+    margin-top:13px;
+    background-color: #00bdef;
+}
+#SearchFieldContainer img{
+    margin-top:0px;
+    margin-bottom: 6px;
+    height:16px;
+}
+#SearchFieldInput{
+    color:#FFFFFF;
+    margin-top:13px;
+    margin-left:6px;
+    font-weight: lighter;
+    width:200px;
+    padding:0px;
+    border:none;
+    background-color: inherit;
+}
+#SearchFieldInput ::-webkit-input-placeholder {
+    font-size:14px;
+    color:#FFFFFF;
+}
+#SearchFieldInput :-moz-placeholder {
+    font-size:14px;
+    color:#FFFFFF;
+}
+#SearchFieldInput :-ms-input-placeholder {
+    font-size:14px;
+    color:#FFFFFF;
+}
+
+#AdmToolContent{
+    background-color: #ecf0f1;
+}
+#AdmToolSearchTitle{
+    height:75px;
+    color:#4fcd95;
+    background-color: inherit;
+}
+#AdmToolSearchTitle p{
+    font-weight:bold;
+    font-size: 24px;
+    margin-top:40px;
+}
+#AdmToolSearchMenu{
+    /* width:950px - 230px*/
+    padding:0px;
+    margin-top:13px;
+    height: 275px;
+    background-color: #FFFFFF;
+}
+#AdmToolSearchMenu p{
+    font-size:16px;
+    color:#34495e;
+}
+
+#AdmToolSearchContainer1{
+    display:inline-flex;
+    padding:0px;
+    width:auto;
+    height:136px;
+    color: #595959;
+}
+#AdmToolSearchContainer2{
+    display:inline-flex;
+    width:auto;
+    padding:0px;
+    height:136px;
+    color: #595959;
+}
+#AdmToolLocation{
+    width:240px;
+    padding:0px;
+    margin:0px;
+    margin-left:45px;
+    margin-top:40px;
+    background-color: inherit;
+}
+#AdmToolHashtags{
+    padding:0px;
+    margin:0px;
+    margin-left:160px;
+    margin-top:40px;
+    background-color: inherit;
+}
+
+#AdmToolDistance{
+
+    padding:0px;
+    margin:0px;
+    margin-left:45px;
+    background-color: inherit;
+}
+#AdmToolPrice{
+    padding:0px;
+    margin:0px;
+    margin-left:160px;
+    background-color: inherit;
+}
+#AdmToolMatchCounter{
+    line-height: 10px;
+    padding:0px;
+    margin:0px;
+    padding-top:80px;
+    padding-left:130px;
+    background-color: transparent;
+    height:272px;
+}
+
+#AdmToolMatchCounter h1{
+    font-weight:bold;
+    color:#4fcd95;
+    font-size:80px;
+    margin:0px;
+}
+#AdmToolMatchCounter p{
+    font-size:28px;
+    margin:0px;
+}
+#AdmToolResultsTitle{
+    margin-top:48px;
+    background-color: inherit;
+}
+#AdmToolResultsTitle p{
+    font-size: 24px;
+    font-weight:bold;
+    color:#4fcd95;
+}
+#AdmToolContentModules{
+    height:100%;
+    background-color: inherit;
+}
+#AdmToolModule1{
+    margin-left:8px;
+    padding:0px;
+    background-color: #FFFFFF;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    max-width:230px;
+}
+#ModuleTitleBar1{
+    height:50px;
+    background-color: #00bdef;
+}
+#ModuleTitleBar1 p{
+    font-weight:normal;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 10px;
+    padding:0px;
+    margin:0px;
+    padding-top:21px;
+    margin-left:12px;
+}
+#textBox1{
+    margin-left:11px;
+}
+#ModuleGraphic1 img{
+    -webkit-border-radius: 5px 5px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    width:100%;
+}
+#ModuleTitle1 h1{
+    font-weight:normal;
+    padding-top:22px;
+    font-size:20px;
+    color: #4fcd95;
+}
+#ModuleText1 p{
+    font-weight:normal;
+    color: #34495e;
+    padding-top:20px;
+    font-size:12px;
+}
+#hourGlassBar1{
+    display:inline-flex;
+    color: #34495e;
+    min-width:230px;
+    padding-left:11px;
+    padding-top:20px;
+    border-top: 3px;
+    border-top-style: solid;
+    border-top-color:#ecf0f1;
+}
+#hourGlassBar1 p{
+    padding-left:8px;
+    font-size:13px;
+    line-height: 1.4;
+}
+#hourGlassBar1 img{
+    height:16px;
+    width:14px;
+}
+#ViewsIcon{
+    margin-left:30px;
+}
+#LikeIcon{
+    margin-left:35px;
+}

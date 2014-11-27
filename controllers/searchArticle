@@ -1,0 +1,17 @@
+HTTP POST LOCALHOST:3000/searchQuery
+HEADERS:
+Content-Type: application/json
+
+
+body of data
+// keyword is required, any keyword will do.
+// price is optional, placeholder must be a number, the string "free" or nothing
+{"keyword":"bike",
+ "price"  :"100",
+ "hashTags":["blue"],
+ "sortType":"default"}
+
+
+
+ insert dummy articles in db
+ for (var i = 1; i <= 10; i++) db.articles.insert({ author:'anEmail@domain.com',title : 'bike for saleyo',description: 'nope', price:i, hashTags:['red','blue','#green'],LatLng:{lat:10,lng:5}})

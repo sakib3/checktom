@@ -1,0 +1,37 @@
+#navigation
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container
+            .row
+                .col-md-12
+                    .nav-center-horizontally.nav-fixheight
+                        .nav-center-vertically.nav-center-vertically-logofix
+                            a(href='#signIn',onclick='window.location.href = "/#stream";')
+                                img.nav-logo(src='./assets/img/checktomlogo.png')
+    #login
+        .login-container
+            .login-content
+                h1
+                    | Update your new Checktom account password
+                br
+                br
+                br
+                #passwordInput
+                .login-fb-promise
+                .login-split-email
+                    table
+                        tbody
+                            tr
+                                td
+                                    hr
+                                td.middle
+                                    | repeat new password
+                                td
+                                    hr
+                input#pw1(type="password")
+                br
+                br
+                input#pw2(type="password")
+                br
+                br
+                button#submitNewPw.btn.btn-social-facebook.mrs
+                    | Submit Password
